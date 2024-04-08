@@ -1,3 +1,6 @@
+:root {
+  --centerRenderArea: 800px;
+}
 .App {
 }
 
@@ -38,7 +41,8 @@
 
 .profile-grid {
   display: grid;
-  grid-template-columns: 1fr 500px 300px 1fr;
+  gap: 10px;
+  grid-template-columns: 1fr calc(var(--centerRenderArea) * 0.7) calc(var(--centerRenderArea) * 0.3) 1fr;
 }
 
 .main-grid {

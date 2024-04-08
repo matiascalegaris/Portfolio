@@ -8,8 +8,11 @@ export class Project {
   id: number = -1;
   name: string = '';
   summary: string = '';
-  Start: Date = new Date();
-  End: Date = new Date();
-  UsedTechologies: string[] = [];
+  start: Date = new Date();
+  end: Date | null = null;
+  usedTechologies: string[] = [];
   relatedSites: UrlEntry[] = [];
+  coverPicture: string = "";
+  previewColumns: number = 1;
+  previewRows: number = 1;
 }
