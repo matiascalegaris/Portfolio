@@ -1,5 +1,4 @@
 .App {
-  text-align: center;
 }
 
 .App-logo {
@@ -35,4 +34,17 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 500px 300px 1fr;
+}
+
+.main-grid {
+  grid-column: 2;
+}
+
+.secondary-grid {
+  grid-column: 3;
 }

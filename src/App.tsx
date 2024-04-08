@@ -1,24 +1,25 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import { Header } from './Components/Header/header';
+import { GetResume } from './Api';
+import { WorkHistory } from './Components/WorkHistory/work-history';
 
 function App() {
+  const resume = GetResume();
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <section className='profile-grid'>
+        <div className='main-grid'>
+          <WorkHistory jobList={resume.workHistory}/>
+        </div>
+        <div className='secondary-grid'>
+          <h3>About me</h3>
+          <p>{resume.summary}</p>
+        </div>
+      </section>
+      
     </div>
   );
 }
