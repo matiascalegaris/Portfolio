@@ -376,5 +376,34 @@ const json : Profile= {
       previewRows: 2,
       hideInGrid: false
     },
+    {
+      id: 14,
+      name: "CHECKLIST APP",
+      summary: `This is a consultancy project which tracks the client’s consultants activity in real time. It was done in Xamarin Forms for iOS and Android. In addition, this app has a GPS tracking module to track its users when they’re doing auditories. Please note that app name and logo has been changed`,
+      start: new Date('02 Nov 2017 06:00:01 GMT'),
+      end: new Date('02 Mar 2018 06:00:01 GMT'),
+      usedTechologies: ["Xamarin", "Xamarin Forms", "C#","Android", "iOS", "git"],
+      relatedSites: [],
+      coverPicture: "./portfolio-resources/ChecklistApp/tiendacheck1.png",
+      previewColumns:  1,
+      previewRows: 2,
+      hideInGrid: false
+    },
+    {
+      id: 15,
+      name: "RESTAURANT SELF-ORDER PLATFORM",
+      summary: `We build this platform for SCON. This is a end to end system to manage restaurant menues and ordering.
+      It has several components including the point of sale system, the in-restaurant ordering system (both for tablets), an online back office to manage the menues and restaurants (because is multi-user, multi-restaurant) and an android / ios app for pre ordering outside the restaurant and then continue the experience within the same app at the restaurant’s table.
+      The point of sale system also includes ticket printing among several POS features that other products on the market have. We also developed a small NAT punch through system to be able to communicate with the restaurant’s tablets (that are behind a router) from the internet.
+      (The color palletes on the pictures are messed up since we do not own this IP)`,
+      start: new Date('02 Nov 2017 06:00:01 GMT'),
+      end: new Date('02 Mar 2018 06:00:01 GMT'),
+      usedTechologies: ["Ionic", "Angular","Android", "iOS", "git"],
+      relatedSites: [],
+      coverPicture: "./portfolio-resources/Restos/Mesa.png",
+      previewColumns:  2,
+      previewRows: 2,
+      hideInGrid: false
+    },
   ]
 }
