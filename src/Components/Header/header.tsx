@@ -11,7 +11,7 @@ export const Header = () => {
             <h1>Matias Calegaris</h1>
             <a href='https://www.linkedin.com/in/matías-calegaris-080a638'>Linkedin</a>
           </div>
-          <img src="" />
+          <img src={require('../../assets/profilePic.jpg')} />
         </div>
         <NavBar/>
       </div>

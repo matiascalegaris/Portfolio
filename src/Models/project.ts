@@ -15,4 +15,5 @@ export class Project {
   coverPicture: string = "";
   previewColumns: number = 1;
   previewRows: number = 1;
+  hideInGrid: boolean = false;
 }
