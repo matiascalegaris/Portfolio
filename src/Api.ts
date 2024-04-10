@@ -1,6 +1,8 @@
+import { Value } from "sass";
 import { JobPosition } from "./Models/job-position";
 import { Profile } from "./Models/profile"
 import { Project } from "./Models/project";
+import { Skill } from "./Models/skill";
 
 export const GetResume = () => {
   // let resume = new Profile();
@@ -258,7 +260,7 @@ const json : Profile= {
       Also I integrated the analytics panel inside unity as a tool so you can see all your game stats inside the development environment`,
       start: new Date('02 Oct 2011 06:00:01 GMT'),
       end: new Date('02 Jul 2012 06:00:01 GMT'),
-      usedTechologies: ["C++", "C++11", "Objective C", "C#", "iOS", "Linux", "Windows", "git", "Visual Studio", "Game Development", "Unity"],
+      usedTechologies: ["C++", "C++11", "Objective C", "C#", "iOS", "Linux", "Windows", "git", "Visual Studio", "Game Development", "Unity3D"],
       relatedSites: [],
       coverPicture: "./portfolio-resources/Playtomic/cover.jpeg",
       previewColumns:  1,
@@ -312,7 +314,7 @@ const json : Profile= {
       summary: `Using Oculus Rift's Unity integration (4.2, several years ago), we implemented an application that allows us to test the psychological effects of certain scenarios like being at a building's rooftop, walking through reduced spaces, and fear of certain animals (e.g., spiders). The idea is to build an immersive experience to users that can't be exposed to those situations in real life. `,
       start: new Date('02 Feb 2013 06:00:01 GMT'),
       end: new Date('02 Jul 2013 06:00:01 GMT'),
-      usedTechologies: ["C++", "C++11", "Unity", "Windows", "svn", "C#"],
+      usedTechologies: ["C++", "C++11", "Unity3D", "Windows", "svn", "C#"],
       relatedSites: [{url:"https://www.youtube.com/watch?v=L-Bm4H-ztAc", description:"demo"}],
       coverPicture: "./portfolio-resources/Vr.png",
       previewColumns:  1,
@@ -321,7 +323,7 @@ const json : Profile= {
     },
     {
       id: 11,
-      name: "Atm backend systema migration",
+      name: "Atm backend system migration",
       summary: `Migrate legacy backend applications that handle all daily payments done at the atm from Sql server to Oracle and rewrite the app to use modern C++ in the process, in this process I also optimized the process so it can complete one run from 20 minutes to 1`,
       start: new Date('02 Nov 2013 06:00:01 GMT'),
       end: new Date('02 Jul 2016 06:00:01 GMT'),
@@ -342,7 +344,7 @@ const json : Profile= {
       This app was made with Xamarin Android`,
       start: new Date('02 Oct 2016 06:00:01 GMT'),
       end: new Date('02 Jul 2017 06:00:01 GMT'),
-      usedTechologies: ["Ionic 3", "Xamarin", "Android", "git", "C#"],
+      usedTechologies: ["Ionic", "Xamarin", "Android", "git", "C#"],
       relatedSites: [],
       coverPicture: "./portfolio-resources/FieldForce/App1.jpeg",
       previewColumns:  1,
@@ -356,22 +358,9 @@ const json : Profile= {
       Once a user submit his desired location to send the package, the shipper app tracks it and searchs for messengers available to delivery it. After arriving and tracking the shipper GPS, the user can confirm the shipment and the transaction takes place using MercadoPago.`,
       start: new Date('02 Jan 2017 06:00:01 GMT'),
       end: new Date('02 Nov 2017 06:00:01 GMT'),
-      usedTechologies: ["Swift", "React Native", "Android", "iOS", "git"],
+      usedTechologies: ["Swift", "React Native", "Android", "iOS", "git", "Html"],
       relatedSites: [],
       coverPicture: "./portfolio-resources/Yalollevo/yalollevo4.png",
-      previewColumns:  1,
-      previewRows: 2,
-      hideInGrid: false
-    },
-    {
-      id: 14,
-      name: "CHECKLIST APP",
-      summary: `This is a consultancy project which tracks the client’s consultants activity in real time. It was done in Xamarin Forms for iOS and Android. In addition, this app has a GPS tracking module to track its users when they’re doing auditories. Please note that app name and logo has been changed`,
-      start: new Date('02 Nov 2017 06:00:01 GMT'),
-      end: new Date('02 Mar 2018 06:00:01 GMT'),
-      usedTechologies: ["Xamarin", "Xamarin Forms", "C#","Android", "iOS", "git"],
-      relatedSites: [],
-      coverPicture: "./portfolio-resources/ChecklistApp/tiendacheck1.png",
       previewColumns:  1,
       previewRows: 2,
       hideInGrid: false
@@ -398,12 +387,218 @@ const json : Profile= {
       (The color palletes on the pictures are messed up since we do not own this IP)`,
       start: new Date('02 Nov 2017 06:00:01 GMT'),
       end: new Date('02 Mar 2018 06:00:01 GMT'),
-      usedTechologies: ["Ionic", "Angular","Android", "iOS", "git"],
+      usedTechologies: ["Ionic", "Angular","Android", "iOS", "git" , "Typescript", "Javascript", "Html", "css"],
       relatedSites: [],
       coverPicture: "./portfolio-resources/Restos/Mesa.png",
       previewColumns:  2,
       previewRows: 2,
       hideInGrid: false
     },
+    {
+      id: 16,
+      name: "ROBOTICS OLYMPICS PLATFORM",
+      summary: `The Robotics olympics is an international contest where students from all around the globe compete and cooperate to solve world’s problems like global warming , recycling or 2019’s challenge: ocean cleaning, using their knowledge in robotics.
+      For the 2019’s edition, we developed an app ecosystem in order to help referees and assistants to report the score of the match in real time. Also, the platform did the tournament  setup and progression. Solving challenges like a really crowded place where wifi networks won’t be realiable (despite of being in our own private network), we implemented a minimum communication system to minimize the latency of the network.
+      
+      Since this was a one time event, we didn’t have much times to test and deploy new versions of the software, so we coupled to the implementation team and iterated with them on the firsts rounds of the tournament, to implement the changes that arised with the first experience of the platform usage.
+The system has four components: the server that manages all the data and state of the tournament and feeds the big screens of the stadium, the operation room desktop app where we can switch the content of the screens and advance the tournament, and two mobile apps: the referee app and the assistant app.
+When a match is played, a cooperation between operator, referee and assistant is required in order to report the score in real time for each time and also validate this score, so we solved that interaction with apps.
+
+Going deeper on the architecture, the system has four components:
+server,
+operation room desktop app,
+referee app
+assistant app.
+Since the server directly feeds the screens compositing a video with overlays and a real time video feed, we used Unity3D to do the composition and overlay placing & animation. For the operator app, we used Angular and Electron to get a desktop build of our web app, since we wanted to give the user a desktop experience and do not depend on browsers. Finally, for the mobile apps we used Ionic, and did a responsive design that works for both tablets and cellphones, since this was a key point: if any device failed, needed to provide a backup device, which could be from tablets to any cellphone.`,
+      start: new Date('02 Jun 2018 06:00:01 GMT'),
+      end: new Date('02 Sep 2018 06:00:01 GMT'),
+      usedTechologies: ["Ionic", "Angular","Android", "Unity3D", "git", "C#", "Typescript", "Javascript", "Html", "css"],
+      relatedSites: [{description:"video", url:"https://vimeo.com/357201057"}],
+      coverPicture: "./portfolio-resources/RoboTournament/Event3.jpg",
+      previewColumns:  2,
+      previewRows: 1,
+      hideInGrid: false
+    },
+    {
+      id: 17,
+      name: "KINECT ROCK EVENT",
+      summary: `For a product branding in a music event, we developed a game where the user has to pose and select a music band album as a background. Then the picture is created and he can share it on social media.`,
+      start: new Date('02 Jun 2018 06:00:01 GMT'),
+      end: new Date('02 Jul 2018 06:00:01 GMT'),
+      usedTechologies: ["Unity3D", "Kinect", "C#"],
+      relatedSites: [{description:"video", url:"https://youtu.be/w7lRIMCu5rI"}],
+      coverPicture: "./portfolio-resources/KinectRock.png",
+      previewColumns:  2,
+      previewRows: 1,
+      hideInGrid: false
+    },
+    {
+      id: 18,
+      name: "SOCIAL EVENT PHOTOSHOOT",
+      summary: `The goal here was to take a picture to the user face and project it on a tree with entertainment porpuses.`,
+      start: new Date('02 Jun 2018 06:00:01 GMT'),
+      end: new Date('02 Jul 2018 06:00:01 GMT'),
+      usedTechologies: ["Unity3D", "C#"],
+      relatedSites: [{description:"video", url:"https://youtu.be/w7lRIMCu5rI"}],
+      coverPicture: "./portfolio-resources/SocialPhotoshoot/personalfest2.jpg",
+      previewColumns:  1,
+      previewRows: 1,
+      hideInGrid: false
+    },
+    {
+      id: 19,
+      name: "Offline Image Calibration",
+      summary: `Using OpenCV under C++ plus MFC, we developed an application to allow calibration of a set of images taken by a 360° photo booth. This is a device comprised of an array of cameras that take a photo at exactly the same time. Due to construct issues, the cameras never have the same focal point or the same orientation.
+
+      This application allows the user to, once the device is installed, use the application to aid the software calibration of the device (the application loads the set of photos and automatically tries to calibrate them based on the feedback provided by the calibration element, a red and green tube).
+      
+      Once the calibration is done, a set of parameters is saved for each camera so the image processing server can call an external process providing these parameters to warp the images (we also developed that application).`,
+      start: new Date('02 Jun 2018 06:00:01 GMT'),
+      end: new Date('02 Jul 2018 06:00:01 GMT'),
+      usedTechologies: ["OpenCv", "C++", "MFC"],
+      relatedSites: [{description:"video", url:"https://www.youtube.com/watch?v=hKCl4XmeJqo"}],
+      coverPicture: "./portfolio-resources/ImageCaligration.png",
+      previewColumns:  1,
+      previewRows: 1,
+      hideInGrid: false
+    },
+    {
+      id: 20,
+      name: "Augmented Reality OpenCV Demo",
+      summary: `This technology demo is an augmented reality application, which shows the integration between Unity, OpenCV, C++, ARToolkit. The idea behind the app is a small game where multiple users (interacting via a local network multiplayer) fight against an enemy and build the scenario using real world objects.
+
+      This app works on both iOS and Android, C++ the native code used to do image processing (which uses OpenCV) is compiled on each platform without changes (100% cross platform).
+      
+      Features:
+      • Real time multiplayer (via Unity mulitplayer)
+      • Image processing (https://youtu.be/774VfFo_oJA, the scenario is generated scanning the image for different colors and then creating the proper elements, like fire).
+      • Augmented reality (used to identify the 3D that the scenario will be placed on and allow camera's tracking).
+      • Shading (vertex shaders used to do not render below the real world)
+      • Native code linking (via C#'s pInvoke and native build DLLs).`,
+      start: new Date('02 Feb 2016 06:00:01 GMT'),
+      end: new Date('02 Jul 2016 06:00:01 GMT'),
+      usedTechologies: ["OpenCv", "C++", "C++11", "C++14", "Unity3D", "AR", "Windows", "Android"],
+      relatedSites: [{description:"video", url:"https://youtu.be/774VfFo_oJA"}],
+      coverPicture: "./portfolio-resources/ARDemo.png",
+      previewColumns:  1,
+      previewRows: 1,
+      hideInGrid: false
+    },
+    {
+      id: 21,
+      name: "Integrate a React UI in a VB6 application using C++ as bridge",
+      summary: `Argentum Online is a 24-year-old game developed in VB6. With the intention of migrating the code to C++, we decided to re-implement the user interface (UI) in a more modern language for easier maintenance and extension. This also served as a crucial step towards migrating the entire project from VB6 to C++.
+
+      To accomplish this, I utilized a C++ library to run a browser and created an API for VB6 to manage all interactions within the game. However, there was a challenge as the JavaScript library was built for 64-bit systems, while VB6 only runs as a 32-bit process. To address this, I implemented a background process to run the web, developed an API in VB6, and synchronized both processes using shared memory.
+      
+      Given that keyboard and mouse inputs were captured in the VB6 process, while all UI interactions such as button presses were handled in a separate process, efficient communication was essential to synchronize both processes swiftly. This was crucial to ensure that players did not experience any lag or delay while playing.`,
+      start: new Date('02 Dec 2022 06:00:01 GMT'),
+      end: new Date('02 Nov 2023 06:00:01 GMT'),
+      usedTechologies: ["Visual Basic 6", "C++", "C++14", "C++17", "React", "Javascript", "Windows", "Game Development", "Network", "Sql", "git", "Html", "css"],
+      relatedSites: [{description:"React Source", url:"https://github.com/matiascalegaris/ao-ui"}, {description:"C++ Source", url:"https://github.com/matiascalegaris/BabelUI"}],
+      coverPicture: "",
+      previewColumns:  1,
+      previewRows: 1,
+      hideInGrid: false
+    },
+    {
+      id: 22,
+      name: "Extend data engineering and analytics platform",
+      summary: `Work for one of the biggest end-to-end automation platforms in data engineering, analytics, reporting, machine learning, and data science products.
+
+      In this role, I initially joined to support the team with the application telemetry service and later transitioned to assisting them in migrating the application engine to a new one with a modern architecture.
+      
+      The telemetry service was responsible for collecting data from various suite services running on the system and reporting it to the backend.
+      
+      The original engine was a single-threaded, Windows-only process, and the migration involved transforming it into a cross-platform, multi-threaded process. The migration primarily entailed implementing existing tools into the new architecture. These tools could encompass anything required by any analytics software, ranging from simple select/join operations to the generation of PDF or Excel reports.
+      
+      
+      
+      Enhance and provide maintenance for the telemetry service tasked with gathering data from diverse system services and transmitting it to the backend for reporting.
+      
+      Assist the team in migrating to a new engine by actively participating in the process of migrating existing tools and resolving any encountered bugs.
+      
+      Implement automated testing for all code generated using SonarQube to ensure high test coverage.`,
+      start: new Date('02 Mar 2021 06:00:01 GMT'),
+      end: new Date('02 Jan 2023 06:00:01 GMT'),
+      usedTechologies: ["C++", "C++11", "C++14", "Windows", "Linux", "git"],
+      relatedSites: [],
+      coverPicture: "",
+      previewColumns:  1,
+      previewRows: 1,
+      hideInGrid: true
+    },
+    // argentum
+
   ]
+}
+
+const GetElapsedTimeInDays = (start: Date, end : Date | null) => {
+  if (end) {
+    return (end.getTime() - start.getTime()) / (1000*60*60*24) / 365;
+  }
+  else {
+    return (Date.now() - start.getTime()) / (1000*60*60*24) / 365;
+  }
+}
+
+const AddSkill = (skillMap : Map<string, Skill>, skill: Skill) => {
+  skillMap.set(skill.name, skill);  
+}
+export const GetSkillList = (projectList : Project[]) : Skill[]=> {
+  const skills = new Map<string, Skill>()
+
+  AddSkill(skills, {name:"C++", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
+  AddSkill(skills, {name:"C++11", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
+  AddSkill(skills, {name:"C++14", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
+  AddSkill(skills, {name:"C++17", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
+  AddSkill(skills, {name:"Angular", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
+  AddSkill(skills, {name:"Html", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
+  AddSkill(skills, {name:"css", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
+  AddSkill(skills, {name:"React", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
+  AddSkill(skills, {name:"C#", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
+  AddSkill(skills, {name:"Unity3D", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
+  AddSkill(skills, {name:"Javascript", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
+  AddSkill(skills, {name:"Ionic", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
+  AddSkill(skills, {name:"React Native", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
+  AddSkill(skills, {name:"Xamarin", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
+  AddSkill(skills, {name:"Swift", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
+  AddSkill(skills, {name:"Objective C", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
+  AddSkill(skills, {name:"Sql", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
+  AddSkill(skills, {name:"Windows", time:0, priorityGroup:1, hideOnMain:false, projectIdList:[]})
+  AddSkill(skills, {name:"Linux", time:0, priorityGroup:1, hideOnMain:false, projectIdList:[]})
+  AddSkill(skills, {name:"svn", time:0, priorityGroup:3, hideOnMain:false, projectIdList:[]})
+  
+  
+  AddSkill(skills, {name:"Oracle", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
+  AddSkill(skills, {name:"Sql Server", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
+  AddSkill(skills, {name:"Mobile", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
+  AddSkill(skills, {name:"Android", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})  
+  AddSkill(skills, {name:"iOS", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})  
+  AddSkill(skills, {name:"Visual Basic 6", time:0, priorityGroup:0, hideOnMain:true, projectIdList:[]})  
+  AddSkill(skills, {name:"git", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
+  AddSkill(skills, {name:"Typescript", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
+  AddSkill(skills, {name:"Xamarin Forms", time:0, priorityGroup:0, hideOnMain:true, projectIdList:[]})
+  AddSkill(skills, {name:"WebGL", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
+  AddSkill(skills, {name:"OpenCv", time:0, priorityGroup:0, hideOnMain:true, projectIdList:[]})
+  AddSkill(skills, {name:"MFC", time:0, priorityGroup:0, hideOnMain:true, projectIdList:[]})
+  AddSkill(skills, {name:"AR", time:0, priorityGroup:0, hideOnMain:true, projectIdList:[]})
+  AddSkill(skills, {name:"Network", time:0, priorityGroup:0, hideOnMain:true, projectIdList:[]})
+  AddSkill(skills, {name:"Kinect", time:0, priorityGroup:0, hideOnMain:true, projectIdList:[]})
+  AddSkill(skills, {name:"Visual Studio", time:0, priorityGroup:0, hideOnMain:true, projectIdList:[]})
+  AddSkill(skills, {name:"Game Development", time:0, priorityGroup:0, hideOnMain:true, projectIdList:[]})
+
+  projectList.forEach( project => {
+    project.usedTechologies.forEach( techName => {
+      let skill = skills.get(techName)
+      if (skill) {
+        skill.projectIdList.push( project.id);
+        skill.time += GetElapsedTimeInDays(project.start, project.end)
+      }
+      else {
+        console.log("failed to find skill name " + techName + " at project " + project.name)
+      }
+    })
+  })
+  return Array.from(skills).map( ([key, value]) : Skill => (value))
 }
