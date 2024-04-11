@@ -1,8 +1,8 @@
-import { GetResume, GetSkillList } from "../Api";
+import { GetSkillList } from "../Api";
+import { Profile } from "../Models/profile";
 import { WorkHistory } from "./WorkHistory/work-history"
 
-export const Home = () => {
-  const resume = GetResume();
+export const Home = ({resume} : {resume: Profile}) => {
   let skillList = GetSkillList(resume.projectHistory)
   skillList = skillList.map( el => {
     el.time = Math.round(el.time);

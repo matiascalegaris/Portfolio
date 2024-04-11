@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom"
+
 export const NavBar = () => {
   return (
     <nav className="nav-var">
-      <a href="/">Profile</a>
-      <a href="/portfolio">Portfolio</a>
+      <Link to="/">Portfolio</Link>
+      <Link to="/aboutme">About me</Link>
     </nav>
   )}

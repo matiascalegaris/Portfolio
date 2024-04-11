@@ -9,6 +9,14 @@
     border: none;
     outline: none;
   }
+  position: relative;
+  .option-menu {
+    position: absolute;
+    top: 0;
+    background: white;
+    max-height: 400px;
+    overflow-y: scroll;
+  }
 }
 
 .search-icon {

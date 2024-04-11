@@ -1,55 +1,13 @@
 import { Value } from "sass";
 import { JobPosition } from "./Models/job-position";
 import { Profile } from "./Models/profile"
-import { Project } from "./Models/project";
+import { DSProject, Project } from "./Models/project";
 import { Skill } from "./Models/skill";
 
 export const GetResume = () => {
-  // let resume = new Profile();
-  // resume.summary = `I’m a generalist programmer with more than 16 years of experience who loves to work with new technologies and devices.
-  // I have done projects for different industries like game studios, big network providers, bank systems and small clients that required custom solutions for their companies.
-  // I have experience working with low level languages like C++ doing task like performing optimization and ensure it runs on target hardware.
-  // `;
-  // resume.workHistory.push(createPosition())
-  // resume.workHistory.push(createPosition())
-  // resume.workHistory.push(createPosition())
-  // resume.workHistory.push(createPosition())
-  // resume.projectHistory.push(createProject())
-  // resume.projectHistory.push(createProject())
-  // resume.projectHistory.push(createProject())
-  // resume.projectHistory.push(createProject())
-  // resume.projectHistory.push(createProject())
-  // resume.projectHistory.push(createProject())
-  // return resume;
   return json;
 }
 
-const createPosition = () => {
-  let jobEntry = new JobPosition();
-  jobEntry.companyName = "Toptal";
-  jobEntry.title = "Contractor";
-  jobEntry.id = 1;
-  jobEntry.startDate = new Date('01 Jan 2015 00:00:00 GMT');
-  jobEntry.endDate = null;
-  jobEntry.summary = "Independent C++ / Unity developer and also doing some mobile work, mainly focused on C++.";
-  return jobEntry;
-}
-
-function getRandomInt(max : number) {
-  return Math.floor(Math.random() * max);
-}
-
-const createProject = () => {
-  let project = new Project();
-  project.name = "Test project";
-  project.summary = "some work to test";
-  project.start = new Date('01 Jan 2015 00:00:00 GMT');
-  project.end = null;
-  project.coverPicture = "./logo192.png";
-  project.previewColumns = getRandomInt(3);
-  project.previewRows = getRandomInt(3);
-  return project;
-}
 
 const json : Profile= {
   summary: `I’m a generalist programmer with more than 16 years of experience who loves to work with new technologies and devices.
@@ -180,21 +138,28 @@ const json : Profile= {
     }
   ],
   projectHistory: [
-    {
-      id: 1,
-      name: "Shrek's Carnival Craze",
-      summary: "In Shrek's Carnival Craze for Nintendo DS, I was responsible for implementing the gameplay of 10 out of the 28 mini-games. This involved adhering to the game design guidelines and integrating assets provided by the artist.",
-      start: new Date('02 Mar 2008 06:00:01 GMT'),
-      end: new Date('02 Jul 2008 06:00:01 GMT'),
-      usedTechologies: ["C++", "svn", "Visual Studio", "Game Development", "Windows"],
-      relatedSites: [],
-      coverPicture: "./portfolio-resources/Shrek/shrek-cover.jpg",
-      previewColumns:  1,
-      previewRows: 1,
-      hideInGrid: false
-    },
+    new DSProject(
+      {
+        id: 1,
+        projectType: "DS",
+        name: "Shrek's Carnival Craze",
+        summary: "In Shrek's Carnival Craze for Nintendo DS, I was responsible for implementing the gameplay of 10 out of the 28 mini-games. This involved adhering to the game design guidelines and integrating assets provided by the artist.",
+        start: new Date('02 Mar 2008 06:00:01 GMT'),
+        end: new Date('02 Jul 2008 06:00:01 GMT'),
+        usedTechologies: ["C++", "svn", "Visual Studio", "Game Development", "Windows"],
+        relatedSites: [],
+        coverPicture: "./portfolio-resources/Shrek/shrek-cover.jpg",
+        previewColumns:  1,
+        previewRows: 1,
+        hideInGrid: false        
+      },
+      [ "/portfolio-resources/Shrek/shrekgame1.jpg",
+        "/portfolio-resources/Shrek/shrek2.jpg", 
+      "/portfolio-resources/Shrek/shrek3.jpg"]
+    ),
     {
       id: 2,
+      projectType: "DS",
       name: "101 in 1 Explosive Megamix",
       summary: "I worked on a project featuring a collection of 101 mini-games. My role involved implementing 10 of these mini-games, ensuring they adhered to the game design guidelines and integrating assets provided by the artist.",
       start: new Date('02 Jul 2008 06:00:01 GMT'),
@@ -208,6 +173,7 @@ const json : Profile= {
     },
     {
       id: 3,
+      projectType: "DS",
       name: "Save the turtles DS",
       summary: `In 'Save the Turtles,' a puzzle game, the objective is to align three or more turtles of the same color while navigating various obstacles that endanger them.
 
@@ -223,6 +189,7 @@ const json : Profile= {
     },
     {
       id: 4,
+      projectType: "DS",
       name: "Art of ink",
       summary: `In 'Art of Ink,' a drawing game, players are tasked with creating a tattoo while managing their client's pain threshold.
 
@@ -238,6 +205,7 @@ const json : Profile= {
     },
     {
       id: 5,
+      projectType: "DS",
       name: "SpongeBob-s surf and skate roadtrip",
       summary: `This game, inspired by the beloved SpongeBob show, features four exciting mini-games.
 
@@ -255,6 +223,7 @@ const json : Profile= {
     },
     {
       id: 6,
+      projectType: "Generic",
       name: "Playtomic Api",
       summary: `Playtomic provided anaylytic services for games, I implemented APIs for both Objective C and C++ so games can collect and send data to the backend servers.
       Also I integrated the analytics panel inside unity as a tool so you can see all your game stats inside the development environment`,
@@ -269,6 +238,7 @@ const json : Profile= {
     },
     {
       id: 7,
+      projectType: "Generic",
       name: "Flare 3D WebGL Renderer",
       summary: `Based on the requirements of the Flare3D's team, we made a JS library based on Flare's AS3 API but implemented with WebGL. The idea behind the project was to explore WebGL's capabilities so WebGL + JS could be a build target for Flare Studio.
 
@@ -284,6 +254,7 @@ const json : Profile= {
     },
     {
       id: 8,
+      projectType: "Generic",
       name: "Camera surveillance backend",
       summary: `The camera surveillance system main task was to provide a common interface to configure IP cameras from different brands and provide the streaming to the client portal.`,
       start: new Date('02 Nov 2012 06:00:01 GMT'),
@@ -297,6 +268,7 @@ const json : Profile= {
     },
     {
       id: 9,
+      projectType: "Generic",
       name: "Internet of things",
       summary: `The machine to machine server objective was a to provide a common server to listen to generic devices like GPS, remote medical devices or any kind of devices that can send information through internet and then provide an interface to create custom applications for them`,
       start: new Date('02 Nov 2012 06:00:01 GMT'),
@@ -310,6 +282,7 @@ const json : Profile= {
     },
     {
       id: 10,
+      projectType: "Generic",
       name: "VR pysychological test",
       summary: `Using Oculus Rift's Unity integration (4.2, several years ago), we implemented an application that allows us to test the psychological effects of certain scenarios like being at a building's rooftop, walking through reduced spaces, and fear of certain animals (e.g., spiders). The idea is to build an immersive experience to users that can't be exposed to those situations in real life. `,
       start: new Date('02 Feb 2013 06:00:01 GMT'),
@@ -323,6 +296,7 @@ const json : Profile= {
     },
     {
       id: 11,
+      projectType: "Generic",
       name: "Atm backend system migration",
       summary: `Migrate legacy backend applications that handle all daily payments done at the atm from Sql server to Oracle and rewrite the app to use modern C++ in the process, in this process I also optimized the process so it can complete one run from 20 minutes to 1`,
       start: new Date('02 Nov 2013 06:00:01 GMT'),
@@ -336,6 +310,7 @@ const json : Profile= {
     },
     {
       id: 12,
+      projectType: "Generic",
       name: "Field Force Manager App",
       summary: `Create an Android application to track the company workforce on the streets, providing the employee with the locations required to visit every day and the task to perform on each place with a report to fill to track any issues.
 
@@ -353,6 +328,7 @@ const json : Profile= {
     },
     {
       id: 13,
+      projectType: "Generic",
       name: "MESSAGING SERVICE APP",
       summary: `This project is a messenger service where users can send their desired product to other locations and another type of user (shippers) could pick the package up to delivery it. The admin site was made with Laravel PHP and the mobile applications (iOS & Android) Swift and React Native. Also, we used Firebase for the notification system.
       Once a user submit his desired location to send the package, the shipper app tracks it and searchs for messengers available to delivery it. After arriving and tracking the shipper GPS, the user can confirm the shipment and the transaction takes place using MercadoPago.`,
@@ -367,6 +343,7 @@ const json : Profile= {
     },
     {
       id: 14,
+      projectType: "Generic",
       name: "CHECKLIST APP",
       summary: `This is a consultancy project which tracks the client’s consultants activity in real time. It was done in Xamarin Forms for iOS and Android. In addition, this app has a GPS tracking module to track its users when they’re doing auditories. Please note that app name and logo has been changed`,
       start: new Date('02 Nov 2017 06:00:01 GMT'),
@@ -380,6 +357,7 @@ const json : Profile= {
     },
     {
       id: 15,
+      projectType: "Generic",
       name: "RESTAURANT SELF-ORDER PLATFORM",
       summary: `We build this platform for SCON. This is a end to end system to manage restaurant menues and ordering.
       It has several components including the point of sale system, the in-restaurant ordering system (both for tablets), an online back office to manage the menues and restaurants (because is multi-user, multi-restaurant) and an android / ios app for pre ordering outside the restaurant and then continue the experience within the same app at the restaurant’s table.
@@ -396,6 +374,7 @@ const json : Profile= {
     },
     {
       id: 16,
+      projectType: "Generic",
       name: "ROBOTICS OLYMPICS PLATFORM",
       summary: `The Robotics olympics is an international contest where students from all around the globe compete and cooperate to solve world’s problems like global warming , recycling or 2019’s challenge: ocean cleaning, using their knowledge in robotics.
       For the 2019’s edition, we developed an app ecosystem in order to help referees and assistants to report the score of the match in real time. Also, the platform did the tournament  setup and progression. Solving challenges like a really crowded place where wifi networks won’t be realiable (despite of being in our own private network), we implemented a minimum communication system to minimize the latency of the network.
@@ -421,6 +400,7 @@ Since the server directly feeds the screens compositing a video with overlays an
     },
     {
       id: 17,
+      projectType: "Generic",
       name: "KINECT ROCK EVENT",
       summary: `For a product branding in a music event, we developed a game where the user has to pose and select a music band album as a background. Then the picture is created and he can share it on social media.`,
       start: new Date('02 Jun 2018 06:00:01 GMT'),
@@ -434,6 +414,7 @@ Since the server directly feeds the screens compositing a video with overlays an
     },
     {
       id: 18,
+      projectType: "Generic",
       name: "SOCIAL EVENT PHOTOSHOOT",
       summary: `The goal here was to take a picture to the user face and project it on a tree with entertainment porpuses.`,
       start: new Date('02 Jun 2018 06:00:01 GMT'),
@@ -447,6 +428,7 @@ Since the server directly feeds the screens compositing a video with overlays an
     },
     {
       id: 19,
+      projectType: "Generic",
       name: "Offline Image Calibration",
       summary: `Using OpenCV under C++ plus MFC, we developed an application to allow calibration of a set of images taken by a 360° photo booth. This is a device comprised of an array of cameras that take a photo at exactly the same time. Due to construct issues, the cameras never have the same focal point or the same orientation.
 
@@ -464,6 +446,22 @@ Since the server directly feeds the screens compositing a video with overlays an
     },
     {
       id: 20,
+      projectType: "Generic",
+      name: "CHATBOT EDITOR",
+      summary: `We did this single page application editor for a customer that has a client support platform and wanted to create their own chatbots for their flow-based chat system. The editor support many real time IDE features like auto-completion, code suggestion, dependency detection for step removal and unused block warnings among others. It also keeps a list of the changes the user does so version tracking is in place for the user when he needs it.
+      The backend is integrated with our client’s system so the bots can be tested in the same page where the user does the design.`,
+      start: new Date('02 Jun 2019 06:00:01 GMT'),
+      end: new Date('02 Oct 2019 06:00:01 GMT'),
+      usedTechologies: ["Angular", "Html", "css", "Javascript", "Typescript"],
+      relatedSites: [],
+      coverPicture: "./portfolio-resources/Chatbot/1.jpg",
+      previewColumns:  2,
+      previewRows: 1,
+      hideInGrid: false
+    },
+    {
+      id: 21,
+      projectType: "Generic",
       name: "Augmented Reality OpenCV Demo",
       summary: `This technology demo is an augmented reality application, which shows the integration between Unity, OpenCV, C++, ARToolkit. The idea behind the app is a small game where multiple users (interacting via a local network multiplayer) fight against an enemy and build the scenario using real world objects.
 
@@ -485,7 +483,8 @@ Since the server directly feeds the screens compositing a video with overlays an
       hideInGrid: false
     },
     {
-      id: 21,
+      id: 22,
+      projectType: "Generic",
       name: "Integrate a React UI in a VB6 application using C++ as bridge",
       summary: `Argentum Online is a 24-year-old game developed in VB6. With the intention of migrating the code to C++, we decided to re-implement the user interface (UI) in a more modern language for easier maintenance and extension. This also served as a crucial step towards migrating the entire project from VB6 to C++.
 
@@ -502,7 +501,8 @@ Since the server directly feeds the screens compositing a video with overlays an
       hideInGrid: false
     },
     {
-      id: 22,
+      id: 23,
+      projectType: "Generic",
       name: "Extend data engineering and analytics platform",
       summary: `Work for one of the biggest end-to-end automation platforms in data engineering, analytics, reporting, machine learning, and data science products.
 
@@ -528,8 +528,21 @@ Since the server directly feeds the screens compositing a video with overlays an
       previewRows: 1,
       hideInGrid: true
     },
-    // argentum
-
+    {
+      id: 24,
+      projectType: "Generic",
+      name: "PROPERTY MANAGEMENT PLATFORM",
+      summary: `On 2019 we joined one investor to build this platform in 6 months. The product’s core is allowing property managers and building committees to do the paper work and organize the buildings or condominiums they’ve , including service providers payment management, member management, expense tracking, internal communication with members, votings, accounting and payment collection.
+      The platform is web based for administrators and managers, and has a companion app for members which can also use the web version of it.`,
+      start: new Date('02 Mar 2019 06:00:01 GMT'),
+      end: new Date('02 DeC 2019 06:00:01 GMT'),
+      usedTechologies: ["Angular", "Html", "css", "Javascript", "Typescript"],
+      relatedSites: [],
+      coverPicture: "./portfolio-resources/PropertyManagement/6.png",
+      previewColumns:  1,
+      previewRows: 2,
+      hideInGrid: false
+    },
   ]
 }
 
