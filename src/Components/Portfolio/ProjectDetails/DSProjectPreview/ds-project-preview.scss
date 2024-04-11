@@ -2,3 +2,36 @@
   display: grid;
   grid-template-columns: 10% 1fr 2fr 10%;
 }
+
+.ds-area {
+  position: relative;
+  .top-screen {
+    position: absolute;
+    left: 148px;
+    top: 38px;
+    height: 192px;
+    width: 256px;
+    overflow: hidden;
+  }
+  .bottom-screen {
+    position: absolute;
+    left: 148px;
+    top: 325px;
+    height: 192px;
+    width: 256px;
+    overflow: hidden;
+    .bottom-img {
+      position: absolute;
+      left: 0;
+      top: -192px;
+    }
+  }
+  .bottom-screep {
+
+  }
+  .ds {
+    width: 550px;
+    height: 564px;
+    position: relative;
+  }
+}
