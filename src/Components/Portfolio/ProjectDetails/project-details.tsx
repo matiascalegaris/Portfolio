@@ -1,7 +1,8 @@
 import { useParams } from "react-router-dom";
 import { Profile } from "../../../Models/profile"
 import { DSProject } from "../../../Models/project";
-import { DSProjectPreview } from "./DSProjectPreview/ds-project-preview";
+import { DSProjectDetails } from "./DSProjectDetails/ds-project-details";
+import { GenericProjectDetails } from "./generic-project-details";
 
 export const ProjectDetails = ({resume} : {resume: Profile}) => {
   const params = useParams<{id: string}>();
@@ -13,10 +14,10 @@ export const ProjectDetails = ({resume} : {resume: Profile}) => {
       {
         projectDetails &&
         {
-          'DS':<DSProjectPreview projectDetails={projectDetails as DSProject}/>,
-          'Generic':<DSProjectPreview projectDetails={projectDetails as DSProject}/>,
-          'Desktop':<DSProjectPreview projectDetails={projectDetails as DSProject}/>,
-          'Mobile':<DSProjectPreview projectDetails={projectDetails as DSProject}/>,
+          'DS':<DSProjectDetails projectDetails={projectDetails as DSProject}/>,
+          'Generic':<GenericProjectDetails projectDetails={projectDetails}/>,
+          'Desktop':<GenericProjectDetails projectDetails={projectDetails}/>,
+          'Mobile':<GenericProjectDetails projectDetails={projectDetails}/>,
         }
         [projectDetails.projectType]
       }

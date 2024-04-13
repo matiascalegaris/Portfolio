@@ -1,0 +1,9 @@
+.ds-grid {
+  display: grid;
+  grid-template-columns: 20% 4fr 5fr 20%;
+  gap: 10px;
+  h5 {
+    margin-bottom: 0;
+  }
+}
+

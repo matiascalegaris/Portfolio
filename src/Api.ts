@@ -157,70 +157,93 @@ const json : Profile= {
         "/portfolio-resources/Shrek/shrek2.jpg", 
       "/portfolio-resources/Shrek/shrek3.jpg"]
     ),
-    {
-      id: 2,
-      projectType: "DS",
-      name: "101 in 1 Explosive Megamix",
-      summary: "I worked on a project featuring a collection of 101 mini-games. My role involved implementing 10 of these mini-games, ensuring they adhered to the game design guidelines and integrating assets provided by the artist.",
-      start: new Date('02 Jul 2008 06:00:01 GMT'),
-      end: new Date('02 Dec 2008 06:00:01 GMT'),
-      usedTechologies: ["C++", "svn", "Visual Studio", "Game Development", "Windows"],
-      relatedSites: [],
-      coverPicture: "./portfolio-resources/101megamix/megamixcover.jpeg",
-      previewColumns:  1,
-      previewRows: 1,
-      hideInGrid: false
-    },
-    {
-      id: 3,
-      projectType: "DS",
-      name: "Save the turtles DS",
-      summary: `In 'Save the Turtles,' a puzzle game, the objective is to align three or more turtles of the same color while navigating various obstacles that endanger them.
-
-      My involvement spanned across all facets of the game. This included expanding the engine to accommodate DSi features such as integrating sound APIs and developing resource managers. I also worked on key gameplay elements such as line matching, the scoring system, and the user interface (UI) development.`,
-      start: new Date('02 Jun 2009 06:00:01 GMT'),
-      end: new Date('02 Jan 2010 06:00:01 GMT'),
-      usedTechologies: ["C++", "svn", "Visual Studio", "Game Development", "Windows"],
-      relatedSites: [{ description: "Review", url:"https://www.ign.com/articles/2010/03/30/save-the-turtles-review"}, {description:"Gameplay video", url: "https://www.youtube.com/watch?v=di1vveQysEk&ab_channel=JavierSabarasa"}],
-      coverPicture: "./portfolio-resources/SaveTheTurtles/cover.jpg",
-      previewColumns:  1,
-      previewRows: 1,
-      hideInGrid: false
-    },
-    {
-      id: 4,
-      projectType: "DS",
-      name: "Art of ink",
-      summary: `In 'Art of Ink,' a drawing game, players are tasked with creating a tattoo while managing their client's pain threshold.
-
-      My responsibilities encompassed the gameplay, focusing on optimizing input detection for a seamless drawing experience. Additionally, I implemented collision detection for the valid drawing areas, ensuring players accurately inked the designated spots while tracking their progress.`,
-      start: new Date('02 Jan 2010 06:00:01 GMT'),
-      end: new Date('02 Jan 2011 06:00:01 GMT'),
-      usedTechologies: ["C++", "svn", "Visual Studio", "Game Development", "Windows"],
-      relatedSites: [{ description: "Review", url:"https://www.nintendolife.com/reviews/2011/04/art_of_ink_dsiware"}, {description:"Trailer", url: "https://www.youtube.com/watch?v=BSnJnHtkVvQ&ab_channel=XGN"}],
-      coverPicture: "./portfolio-resources/ArtOfInk/cover.jpg",
-      previewColumns:  2,
-      previewRows: 1,
-      hideInGrid: false
-    },
-    {
-      id: 5,
-      projectType: "DS",
-      name: "SpongeBob-s surf and skate roadtrip",
-      summary: `This game, inspired by the beloved SpongeBob show, features four exciting mini-games.
-
-      During development, I played a key role in creating two of these games: an isometric skateboarding adventure and an a surf challenge. Additionally, I contributed to the shared resources used across all four mini-games.
-      
-      Moreover, I expanded the 2D engine capabilities to include support for entities and cameras.`,
-      start: new Date('02 Jan 2011 06:00:01 GMT'),
-      end: new Date('02 Jul 2011 06:00:01 GMT'),
-      usedTechologies: ["C++", "svn", "Visual Studio", "Game Development", "Windows"],
-      relatedSites: [],
-      coverPicture: "./portfolio-resources/SpongeBob/cover.jpg",
-      previewColumns:  1,
-      previewRows: 1,
-      hideInGrid: false
-    },
+    new DSProject(
+      {
+        id: 2,
+        projectType: "DS",
+        name: "101 in 1 Explosive Megamix",
+        summary: "I worked on a project featuring a collection of 101 mini-games. My role involved implementing 10 of these mini-games, ensuring they adhered to the game design guidelines and integrating assets provided by the artist.",
+        start: new Date('02 Jul 2008 06:00:01 GMT'),
+        end: new Date('02 Dec 2008 06:00:01 GMT'),
+        usedTechologies: ["C++", "svn", "Visual Studio", "Game Development", "Windows"],
+        relatedSites: [],
+        coverPicture: "./portfolio-resources/101megamix/megamixcover.jpeg",
+        previewColumns:  1,
+        previewRows: 1,
+        hideInGrid: false
+      },
+      [ "/portfolio-resources/101megamix/Megamix1.jpg",
+        "/portfolio-resources/101megamix/Megamix2.jpg", 
+        "/portfolio-resources/101megamix/Megamix3.jpg"]
+    ),
+    new DSProject(
+      {
+        id: 3,
+        projectType: "DS",
+        name: "Save the turtles DS",
+        summary: `In 'Save the Turtles,' a puzzle game, the objective is to align three or more turtles of the same color while navigating various obstacles that endanger them.
+  
+        My involvement spanned across all facets of the game. This included expanding the engine to accommodate DSi features such as integrating sound APIs and developing resource managers. I also worked on key gameplay elements such as line matching, the scoring system, and the user interface (UI) development.`,
+        start: new Date('02 Jun 2009 06:00:01 GMT'),
+        end: new Date('02 Jan 2010 06:00:01 GMT'),
+        usedTechologies: ["C++", "svn", "Visual Studio", "Game Development", "Windows"],
+        relatedSites: [{ description: "Review", url:"https://www.ign.com/articles/2010/03/30/save-the-turtles-review"}, {description:"Gameplay video", url: "https://www.youtube.com/watch?v=di1vveQysEk&ab_channel=JavierSabarasa"}],
+        coverPicture: "./portfolio-resources/SaveTheTurtles/cover.jpg",
+        previewColumns:  1,
+        previewRows: 1,
+        hideInGrid: false
+      },
+      ["/portfolio-resources/SaveTheTurtles/img1.jpg",
+       "/portfolio-resources/SaveTheTurtles/img2.jpg",
+       "/portfolio-resources/SaveTheTurtles/img3.jpg",
+       "/portfolio-resources/SaveTheTurtles/img4.jpg"]
+    ),
+    new DSProject(
+      {
+        id: 4,
+        projectType: "DS",
+        name: "Art of ink",
+        summary: `In 'Art of Ink,' a drawing game, players are tasked with creating a tattoo while managing their client's pain threshold.
+  
+        My responsibilities encompassed the gameplay, focusing on optimizing input detection for a seamless drawing experience. Additionally, I implemented collision detection for the valid drawing areas, ensuring players accurately inked the designated spots while tracking their progress.`,
+        start: new Date('02 Jan 2010 06:00:01 GMT'),
+        end: new Date('02 Jan 2011 06:00:01 GMT'),
+        usedTechologies: ["C++", "svn", "Visual Studio", "Game Development", "Windows"],
+        relatedSites: [{ description: "Review", url:"https://www.nintendolife.com/reviews/2011/04/art_of_ink_dsiware"}, {description:"Trailer", url: "https://www.youtube.com/watch?v=BSnJnHtkVvQ&ab_channel=XGN"}],
+        coverPicture: "./portfolio-resources/ArtOfInk/cover.jpg",
+        previewColumns:  2,
+        previewRows: 1,
+        hideInGrid: false
+      },
+      [ "/portfolio-resources/ArtOfInk/Img1.jpg",
+        "/portfolio-resources/ArtOfInk/Img2.jpg", 
+        "/portfolio-resources/ArtOfInk/Img3.png", 
+        "/portfolio-resources/ArtOfInk/Img4.jpg"]
+    )
+    ,
+    new DSProject(
+      {
+        id: 5,
+        projectType: "DS",
+        name: "SpongeBob-s surf and skate roadtrip",
+        summary: `This game, inspired by the beloved SpongeBob show, features four exciting mini-games.
+  
+        During development, I played a key role in creating two of these games: an isometric skateboarding adventure and an a surf challenge. Additionally, I contributed to the shared resources used across all four mini-games.
+        
+        Moreover, I expanded the 2D engine capabilities to include support for entities and cameras.`,
+        start: new Date('02 Jan 2011 06:00:01 GMT'),
+        end: new Date('02 Jul 2011 06:00:01 GMT'),
+        usedTechologies: ["C++", "svn", "Visual Studio", "Game Development", "Windows"],
+        relatedSites: [],
+        coverPicture: "./portfolio-resources/SpongeBob/cover.jpg",
+        previewColumns:  1,
+        previewRows: 1,
+        hideInGrid: false
+      },
+      ["/portfolio-resources/SpongeBob/Surf.jpg",
+       "/portfolio-resources/SpongeBob/Surf2.jpg"
+      ]
+    ),    
     {
       id: 6,
       projectType: "Generic",
