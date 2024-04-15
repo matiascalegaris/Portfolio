@@ -17,6 +17,7 @@ export class Project {
   previewColumns: number = 1;
   previewRows: number = 1;
   hideInGrid: boolean = false;
+  images : string[] = []
   constructor(project : Project) {
     this.id = project.id;
     this.projectType  = project.projectType;
@@ -30,13 +31,15 @@ export class Project {
     this.previewColumns = project.previewColumns;
     this.previewRows = project.previewRows;
     this.hideInGrid = project.hideInGrid;
+    this.images = project.images;
   }
 }
+export type CellphoneType = "android" | "iphone" | "none";
 
-export class DSProject extends Project {
-  images : string[] = []
-  constructor(project : Project, imgArray : string[]) {
-    super(project)
-    this.images = imgArray;
+export class MobileProject extends Project {
+  cellType: CellphoneType = "android"
+  constructor(project : Project, type: CellphoneType) {
+    super(project);
+    this.cellType = type;
   }
 }

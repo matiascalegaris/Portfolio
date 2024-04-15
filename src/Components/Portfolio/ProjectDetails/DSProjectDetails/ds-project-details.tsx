@@ -1,10 +1,9 @@
 import "./ds-project-details.scss"
-import { DSProject } from "../../../../Models/project"
-import { useEffect, useRef } from "react"
+import { Project } from "../../../../Models/project"
 import { SkillList } from "../skill-list";
 import { DSImageCarrousel } from "../DSImageCarrousel/ds-image-carrousel";
 
-export const DSProjectDetails = ({projectDetails} : {projectDetails : DSProject}) => {
+export const DSProjectDetails = ({projectDetails} : {projectDetails : Project}) => {
   return (
     <article className="ds-grid">
       <h2 className="main-grid">{projectDetails.name}</h2>
@@ -19,11 +18,6 @@ export const DSProjectDetails = ({projectDetails} : {projectDetails : DSProject}
       <br/><br/>
       <SkillList projectDetails={projectDetails}/>
       </p>      
-      {
-        projectDetails.images.length > 0 ?
-        <DSImageCarrousel imageList={projectDetails.images} styles="secondary-grid"/>
-      : null
-      }
-      
+      <DSImageCarrousel imageList={projectDetails.images} styles="secondary-grid"/>      
     </article>
   )}

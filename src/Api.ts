@@ -1,7 +1,5 @@
-import { Value } from "sass";
-import { JobPosition } from "./Models/job-position";
 import { Profile } from "./Models/profile"
-import { DSProject, Project } from "./Models/project";
+import { MobileProject, Project } from "./Models/project";
 import { Skill } from "./Models/skill";
 
 export const GetResume = () => {
@@ -137,113 +135,103 @@ const json : Profile= {
       designing and implementing the sampler.`
     }
   ],
-  projectHistory: [
-    new DSProject(
-      {
-        id: 1,
-        projectType: "DS",
-        name: "Shrek's Carnival Craze",
-        summary: "In Shrek's Carnival Craze for Nintendo DS, I was responsible for implementing the gameplay of 10 out of the 28 mini-games. This involved adhering to the game design guidelines and integrating assets provided by the artist.",
-        start: new Date('02 Mar 2008 06:00:01 GMT'),
-        end: new Date('02 Jul 2008 06:00:01 GMT'),
-        usedTechologies: ["C++", "svn", "Visual Studio", "Game Development", "Windows"],
-        relatedSites: [],
-        coverPicture: "./portfolio-resources/Shrek/shrek-cover.jpg",
-        previewColumns:  1,
-        previewRows: 1,
-        hideInGrid: false        
-      },
-      [ "/portfolio-resources/Shrek/shrekgame1.jpg",
-        "/portfolio-resources/Shrek/shrek2.jpg", 
-      "/portfolio-resources/Shrek/shrek3.jpg"]
-    ),
-    new DSProject(
-      {
-        id: 2,
-        projectType: "DS",
-        name: "101 in 1 Explosive Megamix",
-        summary: "I worked on a project featuring a collection of 101 mini-games. My role involved implementing 10 of these mini-games, ensuring they adhered to the game design guidelines and integrating assets provided by the artist.",
-        start: new Date('02 Jul 2008 06:00:01 GMT'),
-        end: new Date('02 Dec 2008 06:00:01 GMT'),
-        usedTechologies: ["C++", "svn", "Visual Studio", "Game Development", "Windows"],
-        relatedSites: [],
-        coverPicture: "./portfolio-resources/101megamix/megamixcover.jpeg",
-        previewColumns:  1,
-        previewRows: 1,
-        hideInGrid: false
-      },
-      [ "/portfolio-resources/101megamix/Megamix1.jpg",
-        "/portfolio-resources/101megamix/Megamix2.jpg", 
-        "/portfolio-resources/101megamix/Megamix3.jpg"]
-    ),
-    new DSProject(
-      {
-        id: 3,
-        projectType: "DS",
-        name: "Save the turtles DS",
-        summary: `In 'Save the Turtles,' a puzzle game, the objective is to align three or more turtles of the same color while navigating various obstacles that endanger them.
-  
-        My involvement spanned across all facets of the game. This included expanding the engine to accommodate DSi features such as integrating sound APIs and developing resource managers. I also worked on key gameplay elements such as line matching, the scoring system, and the user interface (UI) development.`,
-        start: new Date('02 Jun 2009 06:00:01 GMT'),
-        end: new Date('02 Jan 2010 06:00:01 GMT'),
-        usedTechologies: ["C++", "svn", "Visual Studio", "Game Development", "Windows"],
-        relatedSites: [{ description: "Review", url:"https://www.ign.com/articles/2010/03/30/save-the-turtles-review"}, {description:"Gameplay video", url: "https://www.youtube.com/watch?v=di1vveQysEk&ab_channel=JavierSabarasa"}],
-        coverPicture: "./portfolio-resources/SaveTheTurtles/cover.jpg",
-        previewColumns:  1,
-        previewRows: 1,
-        hideInGrid: false
-      },
-      ["/portfolio-resources/SaveTheTurtles/img1.jpg",
-       "/portfolio-resources/SaveTheTurtles/img2.jpg",
-       "/portfolio-resources/SaveTheTurtles/img3.jpg",
-       "/portfolio-resources/SaveTheTurtles/img4.jpg"]
-    ),
-    new DSProject(
-      {
-        id: 4,
-        projectType: "DS",
-        name: "Art of ink",
-        summary: `In 'Art of Ink,' a drawing game, players are tasked with creating a tattoo while managing their client's pain threshold.
-  
-        My responsibilities encompassed the gameplay, focusing on optimizing input detection for a seamless drawing experience. Additionally, I implemented collision detection for the valid drawing areas, ensuring players accurately inked the designated spots while tracking their progress.`,
-        start: new Date('02 Jan 2010 06:00:01 GMT'),
-        end: new Date('02 Jan 2011 06:00:01 GMT'),
-        usedTechologies: ["C++", "svn", "Visual Studio", "Game Development", "Windows"],
-        relatedSites: [{ description: "Review", url:"https://www.nintendolife.com/reviews/2011/04/art_of_ink_dsiware"}, {description:"Trailer", url: "https://www.youtube.com/watch?v=BSnJnHtkVvQ&ab_channel=XGN"}],
-        coverPicture: "./portfolio-resources/ArtOfInk/cover.jpg",
-        previewColumns:  2,
-        previewRows: 1,
-        hideInGrid: false
-      },
-      [ "/portfolio-resources/ArtOfInk/Img1.jpg",
-        "/portfolio-resources/ArtOfInk/Img2.jpg", 
-        "/portfolio-resources/ArtOfInk/Img3.png", 
-        "/portfolio-resources/ArtOfInk/Img4.jpg"]
-    )
-    ,
-    new DSProject(
-      {
-        id: 5,
-        projectType: "DS",
-        name: "SpongeBob-s surf and skate roadtrip",
-        summary: `This game, inspired by the beloved SpongeBob show, features four exciting mini-games.
-  
-        During development, I played a key role in creating two of these games: an isometric skateboarding adventure and an a surf challenge. Additionally, I contributed to the shared resources used across all four mini-games.
-        
-        Moreover, I expanded the 2D engine capabilities to include support for entities and cameras.`,
-        start: new Date('02 Jan 2011 06:00:01 GMT'),
-        end: new Date('02 Jul 2011 06:00:01 GMT'),
-        usedTechologies: ["C++", "svn", "Visual Studio", "Game Development", "Windows"],
-        relatedSites: [],
-        coverPicture: "./portfolio-resources/SpongeBob/cover.jpg",
-        previewColumns:  1,
-        previewRows: 1,
-        hideInGrid: false
-      },
-      ["/portfolio-resources/SpongeBob/Surf.jpg",
-       "/portfolio-resources/SpongeBob/Surf2.jpg"
+  projectHistory: [    
+    {
+      id: 1,
+      projectType: "DS",
+      name: "Shrek's Carnival Craze",
+      summary: "In Shrek's Carnival Craze for Nintendo DS, I was responsible for implementing the gameplay of 10 out of the 28 mini-games. This involved adhering to the game design guidelines and integrating assets provided by the artist.",
+      start: new Date('02 Mar 2008 06:00:01 GMT'),
+      end: new Date('02 Jul 2008 06:00:01 GMT'),
+      usedTechologies: ["C++", "svn", "Visual Studio", "Game Development", "Windows"],
+      relatedSites: [],
+      coverPicture: "./portfolio-resources/Shrek/shrek-cover.jpg",
+      previewColumns:  1,
+      previewRows: 1,
+      hideInGrid: false,
+      images: [ "/portfolio-resources/Shrek/shrekgame1.jpg",
+                "/portfolio-resources/Shrek/shrek2.jpg", 
+                "/portfolio-resources/Shrek/shrek3.jpg"]
+    },
+    {
+      id: 2,
+      projectType: "DS",
+      name: "101 in 1 Explosive Megamix",
+      summary: "I worked on a project featuring a collection of 101 mini-games. My role involved implementing 10 of these mini-games, ensuring they adhered to the game design guidelines and integrating assets provided by the artist.",
+      start: new Date('02 Jul 2008 06:00:01 GMT'),
+      end: new Date('02 Dec 2008 06:00:01 GMT'),
+      usedTechologies: ["C++", "svn", "Visual Studio", "Game Development", "Windows"],
+      relatedSites: [],
+      coverPicture: "./portfolio-resources/101megamix/megamixcover.jpeg",
+      previewColumns:  1,
+      previewRows: 1,
+      hideInGrid: false,
+      images: [ "/portfolio-resources/101megamix/Megamix1.jpg",
+                "/portfolio-resources/101megamix/Megamix2.jpg", 
+                "/portfolio-resources/101megamix/Megamix3.jpg"]
+    },
+    {
+      id: 3,
+      projectType: "DS",
+      name: "Save the turtles DS",
+      summary: `In 'Save the Turtles,' a puzzle game, the objective is to align three or more turtles of the same color while navigating various obstacles that endanger them.
+
+      My involvement spanned across all facets of the game. This included expanding the engine to accommodate DSi features such as integrating sound APIs and developing resource managers. I also worked on key gameplay elements such as line matching, the scoring system, and the user interface (UI) development.`,
+      start: new Date('02 Jun 2009 06:00:01 GMT'),
+      end: new Date('02 Jan 2010 06:00:01 GMT'),
+      usedTechologies: ["C++", "svn", "Visual Studio", "Game Development", "Windows"],
+      relatedSites: [{ description: "Review", url:"https://www.ign.com/articles/2010/03/30/save-the-turtles-review"}, {description:"Gameplay video", url: "https://www.youtube.com/watch?v=di1vveQysEk&ab_channel=JavierSabarasa"}],
+      coverPicture: "./portfolio-resources/SaveTheTurtles/cover.jpg",
+      previewColumns:  1,
+      previewRows: 1,
+      hideInGrid: false,
+      images: ["/portfolio-resources/SaveTheTurtles/img1.jpg",
+                "/portfolio-resources/SaveTheTurtles/img2.jpg",
+                "/portfolio-resources/SaveTheTurtles/img3.jpg",
+                "/portfolio-resources/SaveTheTurtles/img4.jpg"]      
+    },
+    
+    {
+      id: 4,
+      projectType: "DS",
+      name: "Art of ink",
+      summary: `In 'Art of Ink,' a drawing game, players are tasked with creating a tattoo while managing their client's pain threshold.
+
+      My responsibilities encompassed the gameplay, focusing on optimizing input detection for a seamless drawing experience. Additionally, I implemented collision detection for the valid drawing areas, ensuring players accurately inked the designated spots while tracking their progress.`,
+      start: new Date('02 Jan 2010 06:00:01 GMT'),
+      end: new Date('02 Jan 2011 06:00:01 GMT'),
+      usedTechologies: ["C++", "svn", "Visual Studio", "Game Development", "Windows"],
+      relatedSites: [{ description: "Review", url:"https://www.nintendolife.com/reviews/2011/04/art_of_ink_dsiware"}, {description:"Trailer", url: "https://www.youtube.com/watch?v=BSnJnHtkVvQ&ab_channel=XGN"}],
+      coverPicture: "./portfolio-resources/ArtOfInk/cover.jpg",
+      previewColumns:  2,
+      previewRows: 1,
+      hideInGrid: false,
+      images: [ "/portfolio-resources/ArtOfInk/Img1.jpg",
+                "/portfolio-resources/ArtOfInk/Img2.jpg", 
+                "/portfolio-resources/ArtOfInk/Img3.png", 
+                "/portfolio-resources/ArtOfInk/Img4.jpg"]
+    },
+    {
+      id: 5,
+      projectType: "DS",
+      name: "SpongeBob-s surf and skate roadtrip",
+      summary: `This game, inspired by the beloved SpongeBob show, features four exciting mini-games.
+
+      During development, I played a key role in creating two of these games: an isometric skateboarding adventure and an a surf challenge. Additionally, I contributed to the shared resources used across all four mini-games.
+      
+      Moreover, I expanded the 2D engine capabilities to include support for entities and cameras.`,
+      start: new Date('02 Jan 2011 06:00:01 GMT'),
+      end: new Date('02 Jul 2011 06:00:01 GMT'),
+      usedTechologies: ["C++", "svn", "Visual Studio", "Game Development", "Windows"],
+      relatedSites: [],
+      coverPicture: "./portfolio-resources/SpongeBob/cover.jpg",
+      previewColumns:  1,
+      previewRows: 1,
+      hideInGrid: false,
+      images:  ["/portfolio-resources/SpongeBob/Surf.jpg",
+      "/portfolio-resources/SpongeBob/Surf2.jpg"
       ]
-    ),    
+    },  
     {
       id: 6,
       projectType: "Generic",
@@ -257,7 +245,8 @@ const json : Profile= {
       coverPicture: "./portfolio-resources/Playtomic/cover.jpeg",
       previewColumns:  1,
       previewRows: 1,
-      hideInGrid: false
+      hideInGrid: false,
+      images: []
     },
     {
       id: 7,
@@ -273,7 +262,8 @@ const json : Profile= {
       coverPicture: "./portfolio-resources/Flare3d/cover.jpg",
       previewColumns:  1,
       previewRows: 1,
-      hideInGrid: false
+      hideInGrid: false,
+      images: []
     },
     {
       id: 8,
@@ -287,7 +277,8 @@ const json : Profile= {
       coverPicture: "./portfolio-resources/Intraway/CameraCover.jpg",
       previewColumns:  1,
       previewRows: 1,
-      hideInGrid: false
+      hideInGrid: false,
+      images: []
     },
     {
       id: 9,
@@ -301,7 +292,8 @@ const json : Profile= {
       coverPicture: "./portfolio-resources/Intraway/IotCover.jpg",
       previewColumns:  1,
       previewRows: 1,
-      hideInGrid: false
+      hideInGrid: false,
+      images: []
     },
     {
       id: 10,
@@ -315,7 +307,8 @@ const json : Profile= {
       coverPicture: "./portfolio-resources/Vr.png",
       previewColumns:  1,
       previewRows: 1,
-      hideInGrid: false
+      hideInGrid: false,
+      images: []
     },
     {
       id: 11,
@@ -329,44 +322,62 @@ const json : Profile= {
       coverPicture: "./portfolio-resources/Vr.png",
       previewColumns:  1,
       previewRows: 1,
-      hideInGrid: true
+      hideInGrid: true,
+      images: []
     },
-    {
-      id: 12,
-      projectType: "Generic",
-      name: "Field Force Manager App",
-      summary: `Create an Android application to track the company workforce on the streets, providing the employee with the locations required to visit every day and the task to perform on each place with a report to fill to track any issues.
+    new MobileProject(
+      {
+        id: 12,
+        projectType: "Mobile",
+        name: "Field Force Manager App",
+        summary: `Create an Android application to track the company workforce on the streets, providing the employee with the locations required to visit every day and the task to perform on each place with a report to fill to track any issues.
 
-      The applications tracks daily routes and the supplies required for the whole day and for every location.
-      
-      This app was made with Xamarin Android`,
-      start: new Date('02 Oct 2016 06:00:01 GMT'),
-      end: new Date('02 Jul 2017 06:00:01 GMT'),
-      usedTechologies: ["Ionic", "Xamarin", "Android", "git", "C#"],
-      relatedSites: [],
-      coverPicture: "./portfolio-resources/FieldForce/App1.jpeg",
-      previewColumns:  1,
-      previewRows: 2,
-      hideInGrid: false
-    },
-    {
-      id: 13,
-      projectType: "Generic",
-      name: "MESSAGING SERVICE APP",
-      summary: `This project is a messenger service where users can send their desired product to other locations and another type of user (shippers) could pick the package up to delivery it. The admin site was made with Laravel PHP and the mobile applications (iOS & Android) Swift and React Native. Also, we used Firebase for the notification system.
-      Once a user submit his desired location to send the package, the shipper app tracks it and searchs for messengers available to delivery it. After arriving and tracking the shipper GPS, the user can confirm the shipment and the transaction takes place using MercadoPago.`,
-      start: new Date('02 Jan 2017 06:00:01 GMT'),
-      end: new Date('02 Nov 2017 06:00:01 GMT'),
-      usedTechologies: ["Swift", "React Native", "Android", "iOS", "git", "Html"],
-      relatedSites: [],
-      coverPicture: "./portfolio-resources/Yalollevo/yalollevo4.png",
-      previewColumns:  1,
-      previewRows: 2,
-      hideInGrid: false
-    },
+        The applications tracks daily routes and the supplies required for the whole day and for every location.
+        
+        This app was made with Xamarin Android`,
+        start: new Date('02 Oct 2016 06:00:01 GMT'),
+        end: new Date('02 Jul 2017 06:00:01 GMT'),
+        usedTechologies: ["Ionic", "Xamarin", "Android", "git", "C#"],
+        relatedSites: [],
+        coverPicture: "./portfolio-resources/FieldForce/App1.jpeg",
+        previewColumns:  1,
+        previewRows: 2,
+        hideInGrid: false,
+        images: ["/portfolio-resources/FieldForce/App1.jpeg",
+                "/portfolio-resources/FieldForce/App2.png",
+                "/portfolio-resources/FieldForce/App3.jpeg",
+                "/portfolio-resources/FieldForce/App4.jpeg"]
+      },
+      "android"
+    ),
+    new MobileProject(
+      {
+        id: 13,
+        projectType: "Mobile",
+        name: "MESSAGING SERVICE APP",
+        summary: `This project is a messenger service where users can send their desired product to other locations and another type of user (shippers) could pick the package up to delivery it. The admin site was made with Laravel PHP and the mobile applications (iOS & Android) Swift and React Native. Also, we used Firebase for the notification system.
+        Once a user submit his desired location to send the package, the shipper app tracks it and searchs for messengers available to delivery it. After arriving and tracking the shipper GPS, the user can confirm the shipment and the transaction takes place using MercadoPago.`,
+        start: new Date('02 Jan 2017 06:00:01 GMT'),
+        end: new Date('02 Nov 2017 06:00:01 GMT'),
+        usedTechologies: ["Swift", "React Native", "Android", "iOS", "git", "Html"],
+        relatedSites: [],
+        coverPicture: "./portfolio-resources/Yalollevo/yalollevo4.png",
+        previewColumns:  1,
+        previewRows: 2,
+        hideInGrid: false,
+        images: ["/portfolio-resources/Yalollevo/yalollevo4.png",
+                 "/portfolio-resources/Yalollevo/yalollevo5.png",
+                 "/portfolio-resources/Yalollevo/yalollevo6.png",
+                 "/portfolio-resources/Yalollevo/yalollevo11.png",
+                 "/portfolio-resources/Yalollevo/yalollevo12.png",
+                 "/portfolio-resources/Yalollevo/yalollevo13.png",
+        ]
+      },
+      "none"
+    ),
     {
       id: 14,
-      projectType: "Generic",
+      projectType: "Mobile",
       name: "CHECKLIST APP",
       summary: `This is a consultancy project which tracks the client’s consultants activity in real time. It was done in Xamarin Forms for iOS and Android. In addition, this app has a GPS tracking module to track its users when they’re doing auditories. Please note that app name and logo has been changed`,
       start: new Date('02 Nov 2017 06:00:01 GMT'),
@@ -376,7 +387,8 @@ const json : Profile= {
       coverPicture: "./portfolio-resources/ChecklistApp/tiendacheck1.png",
       previewColumns:  1,
       previewRows: 2,
-      hideInGrid: false
+      hideInGrid: false,
+      images: []
     },
     {
       id: 15,
@@ -393,7 +405,8 @@ const json : Profile= {
       coverPicture: "./portfolio-resources/Restos/Mesa.png",
       previewColumns:  2,
       previewRows: 2,
-      hideInGrid: false
+      hideInGrid: false,
+      images: []
     },
     {
       id: 16,
@@ -419,7 +432,8 @@ Since the server directly feeds the screens compositing a video with overlays an
       coverPicture: "./portfolio-resources/RoboTournament/Event3.jpg",
       previewColumns:  2,
       previewRows: 1,
-      hideInGrid: false
+      hideInGrid: false,
+      images: []
     },
     {
       id: 17,
@@ -433,7 +447,8 @@ Since the server directly feeds the screens compositing a video with overlays an
       coverPicture: "./portfolio-resources/KinectRock.png",
       previewColumns:  2,
       previewRows: 1,
-      hideInGrid: false
+      hideInGrid: false,
+      images: []
     },
     {
       id: 18,
@@ -447,7 +462,8 @@ Since the server directly feeds the screens compositing a video with overlays an
       coverPicture: "./portfolio-resources/SocialPhotoshoot/personalfest2.jpg",
       previewColumns:  1,
       previewRows: 1,
-      hideInGrid: false
+      hideInGrid: false,
+      images: []
     },
     {
       id: 19,
@@ -465,7 +481,8 @@ Since the server directly feeds the screens compositing a video with overlays an
       coverPicture: "./portfolio-resources/ImageCaligration.png",
       previewColumns:  1,
       previewRows: 1,
-      hideInGrid: false
+      hideInGrid: false,
+      images: []
     },
     {
       id: 20,
@@ -480,7 +497,8 @@ Since the server directly feeds the screens compositing a video with overlays an
       coverPicture: "./portfolio-resources/Chatbot/1.jpg",
       previewColumns:  2,
       previewRows: 1,
-      hideInGrid: false
+      hideInGrid: false,
+      images: []
     },
     {
       id: 21,
@@ -503,7 +521,8 @@ Since the server directly feeds the screens compositing a video with overlays an
       coverPicture: "./portfolio-resources/ARDemo.png",
       previewColumns:  1,
       previewRows: 1,
-      hideInGrid: false
+      hideInGrid: false,
+      images: []
     },
     {
       id: 22,
@@ -521,7 +540,8 @@ Since the server directly feeds the screens compositing a video with overlays an
       coverPicture: "",
       previewColumns:  1,
       previewRows: 1,
-      hideInGrid: false
+      hideInGrid: false,
+      images: []
     },
     {
       id: 23,
@@ -549,7 +569,8 @@ Since the server directly feeds the screens compositing a video with overlays an
       coverPicture: "",
       previewColumns:  1,
       previewRows: 1,
-      hideInGrid: true
+      hideInGrid: true,
+      images: []
     },
     {
       id: 24,
@@ -564,7 +585,8 @@ Since the server directly feeds the screens compositing a video with overlays an
       coverPicture: "./portfolio-resources/PropertyManagement/6.png",
       previewColumns:  1,
       previewRows: 2,
-      hideInGrid: false
+      hideInGrid: false,
+      images: []
     },
   ]
 }
