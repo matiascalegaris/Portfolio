@@ -4,6 +4,8 @@ import { DSProjectDetails } from "./DSProjectDetails/ds-project-details";
 import { GenericProjectDetails } from "./generic-project-details";
 import { CellphoneProjectDetail } from "./CellphoneProjectDetail/cellphone-project-detail";
 import { MobileProject } from "../../../Models/project";
+import './portfolio-styles.scss'
+import { RobotTournamentDetails } from "./RobotTournament/robot-tournament";
 
 export const ProjectDetails = ({resume} : {resume: Profile}) => {
   const params = useParams<{id: string}>();
@@ -19,6 +21,7 @@ export const ProjectDetails = ({resume} : {resume: Profile}) => {
           'Generic':<GenericProjectDetails projectDetails={projectDetails}/>,
           'Desktop':<GenericProjectDetails projectDetails={projectDetails}/>,
           'Mobile':<CellphoneProjectDetail projectDetails={projectDetails as MobileProject}/>,
+          'RobotTournament':<RobotTournamentDetails projectDetails={projectDetails}/>
         }
         [projectDetails.projectType]
       }

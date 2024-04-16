@@ -5,5 +5,12 @@
   h5 {
     margin-bottom: 0;
   }
+
+  .ds-grid-main {
+    grid-column: 2;
+  }
+  .ds-grid-secondary {
+    grid-column: 3;
+  }
 }
 

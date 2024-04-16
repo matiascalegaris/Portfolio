@@ -303,10 +303,11 @@ const json : Profile= {
       start: new Date('02 Feb 2013 06:00:01 GMT'),
       end: new Date('02 Jul 2013 06:00:01 GMT'),
       usedTechologies: ["C++", "C++11", "Unity3D", "Windows", "svn", "C#"],
-      relatedSites: [{url:"https://www.youtube.com/watch?v=L-Bm4H-ztAc", description:"demo"}],
+      relatedSites: [],
       coverPicture: "./portfolio-resources/Vr.png",
       previewColumns:  1,
       previewRows: 1,
+      video: "https://www.youtube.com/embed/L-Bm4H-ztAc?rel=0",
       hideInGrid: false,
       images: []
     },
@@ -370,26 +371,32 @@ const json : Profile= {
                  "/portfolio-resources/Yalollevo/yalollevo6.png",
                  "/portfolio-resources/Yalollevo/yalollevo11.png",
                  "/portfolio-resources/Yalollevo/yalollevo12.png",
-                 "/portfolio-resources/Yalollevo/yalollevo13.png",
-        ]
+                 "/portfolio-resources/Yalollevo/yalollevo13.png"]
       },
       "none"
     ),
-    {
-      id: 14,
-      projectType: "Mobile",
-      name: "CHECKLIST APP",
-      summary: `This is a consultancy project which tracks the client’s consultants activity in real time. It was done in Xamarin Forms for iOS and Android. In addition, this app has a GPS tracking module to track its users when they’re doing auditories. Please note that app name and logo has been changed`,
-      start: new Date('02 Nov 2017 06:00:01 GMT'),
-      end: new Date('02 Mar 2018 06:00:01 GMT'),
-      usedTechologies: ["Xamarin", "Xamarin Forms", "C#","Android", "iOS", "git"],
-      relatedSites: [],
-      coverPicture: "./portfolio-resources/ChecklistApp/tiendacheck1.png",
-      previewColumns:  1,
-      previewRows: 2,
-      hideInGrid: false,
-      images: []
-    },
+    new MobileProject(
+      {
+        id: 14,
+        projectType: "Mobile",
+        name: "CHECKLIST APP",
+        summary: `This is a consultancy project which tracks the client’s consultants activity in real time. It was done in Xamarin Forms for iOS and Android. In addition, this app has a GPS tracking module to track its users when they’re doing auditories. Please note that app name and logo has been changed`,
+        start: new Date('02 Nov 2017 06:00:01 GMT'),
+        end: new Date('02 Mar 2018 06:00:01 GMT'),
+        usedTechologies: ["Xamarin", "Xamarin Forms", "C#","Android", "iOS", "git"],
+        relatedSites: [],
+        coverPicture: "./portfolio-resources/ChecklistApp/tiendacheck1.png",
+        previewColumns:  1,
+        previewRows: 2,
+        hideInGrid: false,
+        images: ["/portfolio-resources/ChecklistApp/tiendacheck1.png",
+                 "/portfolio-resources/ChecklistApp/tiendacheck2.png",
+                 "/portfolio-resources/ChecklistApp/tiendacheck3.png",
+                 "/portfolio-resources/ChecklistApp/tiendacheck4.png",
+                 "/portfolio-resources/ChecklistApp/tiendacheck5.png"]
+      },
+      "none"
+    ),
     {
       id: 15,
       projectType: "Generic",
@@ -410,14 +417,10 @@ const json : Profile= {
     },
     {
       id: 16,
-      projectType: "Generic",
+      projectType: "RobotTournament",
       name: "ROBOTICS OLYMPICS PLATFORM",
       summary: `The Robotics olympics is an international contest where students from all around the globe compete and cooperate to solve world’s problems like global warming , recycling or 2019’s challenge: ocean cleaning, using their knowledge in robotics.
       For the 2019’s edition, we developed an app ecosystem in order to help referees and assistants to report the score of the match in real time. Also, the platform did the tournament  setup and progression. Solving challenges like a really crowded place where wifi networks won’t be realiable (despite of being in our own private network), we implemented a minimum communication system to minimize the latency of the network.
-      
-      Since this was a one time event, we didn’t have much times to test and deploy new versions of the software, so we coupled to the implementation team and iterated with them on the firsts rounds of the tournament, to implement the changes that arised with the first experience of the platform usage.
-The system has four components: the server that manages all the data and state of the tournament and feeds the big screens of the stadium, the operation room desktop app where we can switch the content of the screens and advance the tournament, and two mobile apps: the referee app and the assistant app.
-When a match is played, a cooperation between operator, referee and assistant is required in order to report the score in real time for each time and also validate this score, so we solved that interaction with apps.
 
 Going deeper on the architecture, the system has four components:
 server,
@@ -433,7 +436,10 @@ Since the server directly feeds the screens compositing a video with overlays an
       previewColumns:  2,
       previewRows: 1,
       hideInGrid: false,
-      images: []
+      images: ["/portfolio-resources/RoboTournament/Event1.jpg",
+               "/portfolio-resources/RoboTournament/Event2.jpg",
+               "/portfolio-resources/RoboTournament/Event3.jpg",
+               "/portfolio-resources/RoboTournament/Event4.jpg"]
     },
     {
       id: 17,
@@ -443,27 +449,29 @@ Since the server directly feeds the screens compositing a video with overlays an
       start: new Date('02 Jun 2018 06:00:01 GMT'),
       end: new Date('02 Jul 2018 06:00:01 GMT'),
       usedTechologies: ["Unity3D", "Kinect", "C#"],
-      relatedSites: [{description:"video", url:"https://youtu.be/w7lRIMCu5rI"}],
+      relatedSites: [],
       coverPicture: "./portfolio-resources/KinectRock.png",
       previewColumns:  2,
       previewRows: 1,
       hideInGrid: false,
+      video: "https://www.youtube.com/embed/w7lRIMCu5rI",
       images: []
     },
     {
       id: 18,
       projectType: "Generic",
       name: "SOCIAL EVENT PHOTOSHOOT",
-      summary: `The goal here was to take a picture to the user face and project it on a tree with entertainment porpuses.`,
+      summary: `The goal here was to take a picture to the user face and project it on a tree with entertainment porpuses.
+               To achive this we take a picture with an app, mask the face area and send the result to a projector so it can be displayed on the venue trees`,
       start: new Date('02 Jun 2018 06:00:01 GMT'),
       end: new Date('02 Jul 2018 06:00:01 GMT'),
       usedTechologies: ["Unity3D", "C#"],
-      relatedSites: [{description:"video", url:"https://youtu.be/w7lRIMCu5rI"}],
+      relatedSites: [],
       coverPicture: "./portfolio-resources/SocialPhotoshoot/personalfest2.jpg",
       previewColumns:  1,
       previewRows: 1,
       hideInGrid: false,
-      images: []
+      images: ["/portfolio-resources/SocialPhotoshoot/personalfest1.jpg", "/portfolio-resources/SocialPhotoshoot/personalfest2.jpg"]
     },
     {
       id: 19,
@@ -477,10 +485,11 @@ Since the server directly feeds the screens compositing a video with overlays an
       start: new Date('02 Jun 2018 06:00:01 GMT'),
       end: new Date('02 Jul 2018 06:00:01 GMT'),
       usedTechologies: ["OpenCv", "C++", "MFC"],
-      relatedSites: [{description:"video", url:"https://www.youtube.com/watch?v=hKCl4XmeJqo"}],
+      relatedSites: [],
       coverPicture: "./portfolio-resources/ImageCaligration.png",
       previewColumns:  1,
       previewRows: 1,
+      video: "https://www.youtube.com/embed/hKCl4XmeJqo",
       hideInGrid: false,
       images: []
     },
@@ -517,10 +526,11 @@ Since the server directly feeds the screens compositing a video with overlays an
       start: new Date('02 Feb 2016 06:00:01 GMT'),
       end: new Date('02 Jul 2016 06:00:01 GMT'),
       usedTechologies: ["OpenCv", "C++", "C++11", "C++14", "Unity3D", "AR", "Windows", "Android"],
-      relatedSites: [{description:"video", url:"https://youtu.be/774VfFo_oJA"}],
+      relatedSites: [],
       coverPicture: "./portfolio-resources/ARDemo.png",
       previewColumns:  1,
       previewRows: 1,
+      video: "https://www.youtube.com/embed/774VfFo_oJA",
       hideInGrid: false,
       images: []
     },
@@ -572,22 +582,31 @@ Since the server directly feeds the screens compositing a video with overlays an
       hideInGrid: true,
       images: []
     },
-    {
-      id: 24,
-      projectType: "Generic",
-      name: "PROPERTY MANAGEMENT PLATFORM",
-      summary: `On 2019 we joined one investor to build this platform in 6 months. The product’s core is allowing property managers and building committees to do the paper work and organize the buildings or condominiums they’ve , including service providers payment management, member management, expense tracking, internal communication with members, votings, accounting and payment collection.
-      The platform is web based for administrators and managers, and has a companion app for members which can also use the web version of it.`,
-      start: new Date('02 Mar 2019 06:00:01 GMT'),
-      end: new Date('02 DeC 2019 06:00:01 GMT'),
-      usedTechologies: ["Angular", "Html", "css", "Javascript", "Typescript"],
-      relatedSites: [],
-      coverPicture: "./portfolio-resources/PropertyManagement/6.png",
-      previewColumns:  1,
-      previewRows: 2,
-      hideInGrid: false,
-      images: []
-    },
+    new MobileProject(
+      {
+        id: 24,
+        projectType: "Mobile",
+        name: "PROPERTY MANAGEMENT PLATFORM",
+        summary: `On 2019 we joined one investor to build this platform in 6 months. The product’s core is allowing property managers and building committees to do the paper work and organize the buildings or condominiums they’ve , including service providers payment management, member management, expense tracking, internal communication with members, votings, accounting and payment collection.
+        The platform is web based for administrators and managers, and has a companion app for members which can also use the web version of it.`,
+        start: new Date('02 Mar 2019 06:00:01 GMT'),
+        end: new Date('02 DeC 2019 06:00:01 GMT'),
+        usedTechologies: ["Angular", "Html", "css", "Javascript", "Typescript"],
+        relatedSites: [],
+        coverPicture: "./portfolio-resources/PropertyManagement/6.png",
+        previewColumns:  1,
+        previewRows: 2,
+        hideInGrid: false,
+        images: ["/portfolio-resources/PropertyManagement/2.png",
+                  "/portfolio-resources/PropertyManagement/3.png",
+                  "/portfolio-resources/PropertyManagement/4.png",
+                  "/portfolio-resources/PropertyManagement/5.png",
+                  "/portfolio-resources/PropertyManagement/6.png",
+                  "/portfolio-resources/PropertyManagement/7.png",
+                  "/portfolio-resources/PropertyManagement/8.png"]
+      },
+      "android"
+    )
   ]
 }
 

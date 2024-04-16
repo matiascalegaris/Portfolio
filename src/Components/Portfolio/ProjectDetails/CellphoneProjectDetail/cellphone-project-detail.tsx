@@ -6,8 +6,8 @@ import { SkillList } from "../skill-list"
 export const CellphoneProjectDetail = ({projectDetails} : {projectDetails : MobileProject}) => {
   return (
     <article className="ds-grid">
-      <h2 className="main-grid">{projectDetails.name}</h2>
-      <p className="main-grid">{projectDetails.summary}
+      <h2 className="ds-grid-main">{projectDetails.name}</h2>
+      <p className="ds-grid-main">{projectDetails.summary}
       {
         projectDetails.relatedSites.map ( sites =>(
           
@@ -20,7 +20,7 @@ export const CellphoneProjectDetail = ({projectDetails} : {projectDetails : Mobi
       </p>      
       {
         projectDetails.images.length > 0 ?
-        <CellphoneFrame styles="secondary-grid" cellType={projectDetails.cellType}><Carrousel imageList={projectDetails.images}/></CellphoneFrame>
+        <CellphoneFrame styles="ds-grid-secondary" cellType={projectDetails.cellType}><Carrousel imageList={projectDetails.images}/></CellphoneFrame>
       : null
       }
       

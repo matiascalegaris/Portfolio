@@ -3,7 +3,7 @@ class UrlEntry {
   url: string = '';
   description: string = '';
 }
-type ProjectType = "DS" | "Mobile" | "Desktop" | "Generic";
+type ProjectType = "DS" | "Mobile" | "Desktop" | "Generic" | "RobotTournament";
 export class Project {
   id: number = -1;
   projectType : ProjectType = "Generic";
@@ -17,7 +17,8 @@ export class Project {
   previewColumns: number = 1;
   previewRows: number = 1;
   hideInGrid: boolean = false;
-  images : string[] = []
+  images : string[] = [];
+  video? : string;
   constructor(project : Project) {
     this.id = project.id;
     this.projectType  = project.projectType;
@@ -32,6 +33,7 @@ export class Project {
     this.previewRows = project.previewRows;
     this.hideInGrid = project.hideInGrid;
     this.images = project.images;
+    this.video = project.video;
   }
 }
 export type CellphoneType = "android" | "iphone" | "none";

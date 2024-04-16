@@ -6,8 +6,8 @@ import { DSImageCarrousel } from "../DSImageCarrousel/ds-image-carrousel";
 export const DSProjectDetails = ({projectDetails} : {projectDetails : Project}) => {
   return (
     <article className="ds-grid">
-      <h2 className="main-grid">{projectDetails.name}</h2>
-      <p className="main-grid">{projectDetails.summary}
+      <h2 className="ds-grid-main">{projectDetails.name}</h2>
+      <p className="ds-grid-main">{projectDetails.summary}
       {
         projectDetails.relatedSites.map ( sites =>(
           
@@ -18,6 +18,6 @@ export const DSProjectDetails = ({projectDetails} : {projectDetails : Project}) 
       <br/><br/>
       <SkillList projectDetails={projectDetails}/>
       </p>      
-      <DSImageCarrousel imageList={projectDetails.images} styles="secondary-grid"/>      
+      <DSImageCarrousel imageList={projectDetails.images} styles="ds-grid-secondary"/>      
     </article>
   )}
