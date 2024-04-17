@@ -1,0 +1,20 @@
+.ds-grid {
+  display: grid;
+  grid-template-columns: 20% 4fr 5fr 20%;
+  gap: 10px;
+  h5 {
+    margin-bottom: 0;
+  }
+  
+
+  .ds-grid-main {
+    grid-column: 2;
+    p {
+      margin-bottom: 10px;
+    }
+  }
+  .ds-grid-secondary {
+    grid-column: 3;
+  }
+}
+
