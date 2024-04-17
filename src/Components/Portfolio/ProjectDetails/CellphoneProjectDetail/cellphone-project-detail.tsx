@@ -7,7 +7,12 @@ export const CellphoneProjectDetail = ({projectDetails} : {projectDetails : Mobi
   return (
     <article className="ds-grid">
       <h2 className="ds-grid-main">{projectDetails.name}</h2>
-      <p className="ds-grid-main">{projectDetails.summary}
+      <div className="ds-grid-main">
+      {
+        projectDetails.summary.map( summary => (
+          <p className="center-columns">{summary}</p>
+        ))        
+      }   
       {
         projectDetails.relatedSites.map ( sites =>(
           
@@ -15,9 +20,8 @@ export const CellphoneProjectDetail = ({projectDetails} : {projectDetails : Mobi
         ))
         
       }
-      <br/><br/>
-      <SkillList projectDetails={projectDetails}/>
-      </p>      
+      <SkillList projectDetails={projectDetails}/>      
+      </div>
       {
         projectDetails.images.length > 0 ?
         <CellphoneFrame styles="ds-grid-secondary" cellType={projectDetails.cellType}><Carrousel imageList={projectDetails.images}/></CellphoneFrame>

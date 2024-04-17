@@ -9,11 +9,15 @@ export const Header = () => {
         <div className='title-area'>
           <div className='heather-text'>
             <h1>Matias Calegaris</h1>
-            <a href='https://www.linkedin.com/in/matías-calegaris-080a638'>Linkedin</a>
+            <div className='external-links'>
+              <a href='https://www.linkedin.com/in/matías-calegaris-080a638' target="_blank">Linkedin</a>
+              <a href='https://github.com/matiascalegaris' target="_blank">Github</a>
+            </div>
+            <NavBar/>    
           </div>
           <img src={require('../../assets/profilePic.jpg')} />
         </div>
-        <NavBar/>
+        
       </div>
     </header>
   )

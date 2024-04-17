@@ -14,6 +14,10 @@ export const Carrousel = ({imageList, styles = ""} : {imageList : string[], styl
   }
   const scrollArea = useRef<HTMLInputElement>(null);
   useEffect(() => {
+    if (scrollArea.current) {
+      scrollArea.current.scrollLeft = 0;
+    }
+    
     const intervalId = setInterval(() => {
       if (scrollArea?.current) {
         const imgCount = scrollArea.current.children.length

@@ -53,6 +53,10 @@
 .main-grid {
   grid-column: 3;
 }
+.secondary-grid {
+  grid-column: 4;
+}
+
 
 .grid-col0 {
   grid-column-start: 0;
@@ -73,9 +77,6 @@
 .grid-col5 {
   grid-column-start: 5;
 }
-.secondary-grid {
-  grid-column: 4;
-}
 
 .centered-in-grid {
   grid-column: 2/6;
@@ -95,4 +96,20 @@
 
 .col-span4 {
   grid-column-end: span 4;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.margin-top10 {
+  margin-top: 10px;
+}
+
+.margin-top20 {
+  margin-top: 20px;
 }

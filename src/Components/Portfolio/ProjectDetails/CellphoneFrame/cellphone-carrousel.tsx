@@ -74,8 +74,8 @@ function getStyle(type : CellphoneType) : CellPhoneStyle {
   }
   
 }
-export const CellphoneFrame = ({children, styles, cellType} : 
-                              { children?: React.ReactNode, styles : string, cellType: CellphoneType}) => {
+export const CellphoneFrame = ({children, styles="", cellType} : 
+                              { children?: React.ReactNode, styles? : string, cellType: CellphoneType}) => {
   
   const imgStyle : React.CSSProperties = {
     position: "absolute",

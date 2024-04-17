@@ -33,16 +33,16 @@ export const FilterBar = ({skillList, activeFilters, addFilter} :
       <svg viewBox="0 0 16 16" className="search-icon">
         <path d="m10.582 9.874 4.625 4.626-.707.707-4.626-4.625a6 6 0 1 1 .707-.707ZM6 11A5 5 0 1 0 6 1a5 5 0 0 0 0 10Z"></path>
       </svg>
-      <input ref={inputRef} value={searchTerm} onChange={onUpdateSearch}></input>
+      <input ref={inputRef} value={searchTerm} onChange={onUpdateSearch} placeholder='Filter project using tech'></input>
       {
         searchTerm?.length > 0 ?
-        <ul className='option-menu'>
+        <div className='option-menu'>
         {
           skillList.map( (el) => (
-            <li key={el.name} onClick={() => (selectSkill(el))}>{el.name}</li>
+            <div className='selector-option' key={el.name} onClick={() => (selectSkill(el))}>{el.name}</div>
           ))
         }
-        </ul>
+        </div>
         : null
       }
     </div>

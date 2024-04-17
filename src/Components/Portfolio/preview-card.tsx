@@ -12,9 +12,10 @@ export const PreviewCard = ({project} : {project: Project}) => {
   const onClick = (evt : React.MouseEvent<HTMLElement>) => {
     navigate("project/" + project.id)
   }
+  const textStyle = project.backgroundStyle === "Light" ? "light-background" : "dark-background";
   return (
-    <article className="preview-card" style={style} onClick={onClick}>
-      <h2>{project.name}</h2>
+    <article className={"preview-card " + textStyle} style={style} onClick={onClick}>
+      <h3>{project.name}</h3>
     </article>
   )
 }

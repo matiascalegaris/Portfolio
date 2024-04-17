@@ -5,6 +5,13 @@
   p {
     margin: 0;
   }
+  h3 {
+    text-align: center;
+    margin: 0;
+  }
+  h4 {
+    margin: 0;
+  }
   .grid-center {
     grid-column: 2/6;
   }
@@ -12,10 +19,20 @@
   .wide16-9 {
     aspect-ratio: 16 / 9;
   }
+
+  .iframe-settings {
+    border: none;
+  }
   .carrousel-container {
     overflow: hidden;
     width: 100%;
     height: 100%;
     position: relative;
+  }
+
+  .cellphone-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
   }
 }

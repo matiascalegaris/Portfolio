@@ -5,5 +5,5 @@ export class JobPosition {
   companyName: string = '';
   startDate : Date = new Date();
   endDate: Date | null = null;
-  summary: string = '';
+  summary: string[] = [];
 }

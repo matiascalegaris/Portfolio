@@ -3,17 +3,19 @@ class UrlEntry {
   url: string = '';
   description: string = '';
 }
-type ProjectType = "DS" | "Mobile" | "Desktop" | "Generic" | "RobotTournament";
+type ProjectType = "DS" | "Mobile" | "Desktop" | "Generic" | "RobotTournament" | "Restos" | "Chatbot";
+type BackgroundType = "Dark" | "Light";
 export class Project {
   id: number = -1;
   projectType : ProjectType = "Generic";
   name: string = '';
-  summary: string = '';
+  summary: string[] = [];
   start: Date = new Date();
   end: Date | null = null;
   usedTechologies: string[] = [];
   relatedSites: UrlEntry[] = [];
   coverPicture: string = "";
+  backgroundStyle : BackgroundType = "Light";
   previewColumns: number = 1;
   previewRows: number = 1;
   hideInGrid: boolean = false;
@@ -34,6 +36,7 @@ export class Project {
     this.hideInGrid = project.hideInGrid;
     this.images = project.images;
     this.video = project.video;
+    this.backgroundStyle = project.backgroundStyle
   }
 }
 export type CellphoneType = "android" | "iphone" | "none";
@@ -43,5 +46,29 @@ export class MobileProject extends Project {
   constructor(project : Project, type: CellphoneType) {
     super(project);
     this.cellType = type;
+  }
+}
+
+export class RobotTournamentProject extends Project {
+  refereeAppPictures : string[] = [];
+  assistantAppPictures : string[] = [];
+  operatorAppPictures : string[] = [];
+  constructor(project : Project, 
+    refereeAppPictures : string[] = [],
+    assistantAppPictures : string[] = [],
+    operatorAppPictures : string[] = []) {
+    super(project);
+    this.refereeAppPictures = refereeAppPictures;
+    this.assistantAppPictures = assistantAppPictures;
+    this.operatorAppPictures = operatorAppPictures;
+  }
+}
+
+export class RestosProject extends Project {
+  mobilePictures : string[] = [];
+  constructor(project : Project, 
+    mobilePictures : string[] = []) {
+    super(project);
+    this.mobilePictures = mobilePictures;
   }
 }
