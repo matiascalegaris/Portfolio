@@ -11,8 +11,8 @@ export const Home = ({resume} : {resume: Profile}) => {
     return el;
   })
   skillList = skillList.filter( el => (el.time > 0 && !el.hideOnMain))
-  skillList.sort( (a,b) => (a.priorityGroup - b.priorityGroup))
   const programmingLanguages = skillList.filter( e => (e.skillType === "language"))
+  programmingLanguages.sort( (a,b) => (b.time - a.time))
   const techologies = skillList.filter( e => (e.skillType === "technology"))
   return(
     <section className='profile-grid'>
