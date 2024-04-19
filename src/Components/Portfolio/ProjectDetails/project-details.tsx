@@ -11,7 +11,7 @@ import { ChatbotDetails } from "./chatbot-details";
 
 export const ProjectDetails = ({resume} : {resume: Profile}) => {
   const params = useParams<{id: string}>();
-  const id = Number(params.id)
+  const id = Number(params.id) < resume.projectHistory.length ? Number(params.id) : resume.projectHistory.length - 1
   const projectDetails = resume.projectHistory.find( project => (project.id === id))
   const navigate = useNavigate();
   const goToPrevProject = () => {
@@ -57,7 +57,7 @@ export const ProjectDetails = ({resume} : {resume: Profile}) => {
           </svg>
         </div>
         {
-          id < resume.projectHistory.length &&
+          id < resume.projectHistory.length - 1 &&
           <div className="button-style" onClick={()=>{goToNextProject()}}>
             <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" version="1.1" id="Capa_1" viewBox="0 0 55.752 55.752">
             <g id="SVGRepo_bgCarrier" stroke-width="0"/>

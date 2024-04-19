@@ -34,8 +34,10 @@
     cursor: pointer;
     text-align: center;
     min-height: 225px;
+    transition: transform 500ms;
     &:hover {
-      transform: scale(1.01, 1.01);
+      transform: scale(1.05, 1.05);
+      z-index: 1;
     }
   }
 

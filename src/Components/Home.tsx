@@ -1,5 +1,7 @@
+import { Tooltip } from "react-tooltip";
 import { GetSkillList } from "../Api";
 import { Profile } from "../Models/profile";
+import { SkillTag } from "./SkillTag";
 import { WorkHistory } from "./WorkHistory/work-history"
 
 export const Home = ({resume} : {resume: Profile}) => {
@@ -29,15 +31,18 @@ export const Home = ({resume} : {resume: Profile}) => {
           <ul>
             {
               programmingLanguages.map( (el, index) => (
-                <li key={index}>{el.name} {el.time} { el.time > 1 ? "Years" : "Year"}</li>
+                <SkillTag key={index} skill={el}/>
               ))
             }            
           </ul>
+          <Tooltip anchorSelect="skill-tag" place="bottom">
+            Hello world!
+          </Tooltip>
           <h4>Techonologies</h4>
           <ul>
             {
               techologies.map( (el, index) => (
-                <li key={index}>{el.name} {el.time} { el.time > 1 ? "Years" : "Year"}</li>
+                <SkillTag key={index} skill={el}/>
               ))
             }            
           </ul>

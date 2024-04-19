@@ -417,7 +417,7 @@ const json : Profile= {
       `(The color palletes on the pictures are messed up since I do not own this IP)`],
       start: new Date('02 Nov 2017 06:00:01 GMT'),
       end: new Date('02 Mar 2018 06:00:01 GMT'),
-      usedTechologies: ["Ionic", "Angular","Android", "iOS", "git" , "Typescript", "Javascript", "Html", "css"],
+      usedTechologies: ["Ionic", "Angular","Android", "iOS", "git" , "Typescript", "Javascript", "Html", "CSS"],
       relatedSites: [],
       coverPicture: "./portfolio-resources/Restos/Mesa.png",
       backgroundStyle: "Light",
@@ -440,7 +440,7 @@ const json : Profile= {
         For the 2019’s edition, we developed an app ecosystem in order to help referees and assistants to report the score of the match in real time. Also, the platform did the tournament  setup and progression. Solving challenges like a really crowded place where wifi networks won’t be realiable (despite of being in our own private network), we implemented a minimum communication system to minimize the latency of the network.`],
         start: new Date('02 Jun 2018 06:00:01 GMT'),
         end: new Date('02 Sep 2018 06:00:01 GMT'),
-        usedTechologies: ["Ionic", "Angular","Android", "Unity3D", "git", "C#", "Typescript", "Javascript", "Html", "css"],
+        usedTechologies: ["Ionic", "Angular","Android", "Unity3D", "git", "C#", "Typescript", "Javascript", "Html", "CSS"],
         relatedSites: [{description:"video", url:"https://vimeo.com/357201057"}],
         coverPicture: "./portfolio-resources/RoboTournament/Event3.jpg",
         backgroundStyle: "Dark",
@@ -518,15 +518,41 @@ const json : Profile= {
       hideInGrid: false,
       images: []
     },
+    new MobileProject(
+      {
+        id: 20,
+        projectType: "Mobile",
+        name: "PROPERTY MANAGEMENT PLATFORM",
+        summary: [`On 2019 we joined one investor to build this platform in 6 months. The product’s core is allowing property managers and building committees to do the paper work and organize the buildings or condominiums they’ve , including service providers payment management, member management, expense tracking, internal communication with members, votings, accounting and payment collection.`,
+        `The platform is web based for administrators and managers, and has a companion app for members which can also use the web version of it.`],
+        start: new Date('02 Mar 2019 06:00:01 GMT'),
+        end: new Date('02 DeC 2019 06:00:01 GMT'),
+        usedTechologies: ["Angular", "Html", "CSS", "Javascript", "Typescript"],
+        relatedSites: [],
+        coverPicture: "./portfolio-resources/PropertyManagement/6.png",
+        backgroundStyle: "Light",
+        previewColumns:  1,
+        previewRows: 2,
+        hideInGrid: false,
+        images: ["/portfolio-resources/PropertyManagement/2.png",
+                  "/portfolio-resources/PropertyManagement/3.png",
+                  "/portfolio-resources/PropertyManagement/4.png",
+                  "/portfolio-resources/PropertyManagement/5.png",
+                  "/portfolio-resources/PropertyManagement/6.png",
+                  "/portfolio-resources/PropertyManagement/7.png",
+                  "/portfolio-resources/PropertyManagement/8.png"]
+      },
+      "android"
+    ),
     {
-      id: 20,
+      id: 21,
       projectType: "Chatbot",
       name: "CHATBOT EDITOR",
       summary: [`We did this single page application editor for a customer that has a client support platform and wanted to create their own chatbots for their flow-based chat system. The editor support many real time IDE features like auto-completion, code suggestion, dependency detection for step removal and unused block warnings among others. It also keeps a list of the changes the user does so version tracking is in place for the user when he needs it.`,
       `The backend is integrated with our client’s system so the bots can be tested in the same page where the user does the design.`],
       start: new Date('02 Jun 2019 06:00:01 GMT'),
       end: new Date('02 Oct 2019 06:00:01 GMT'),
-      usedTechologies: ["Angular", "Html", "css", "Javascript", "Typescript"],
+      usedTechologies: ["Angular", "Html", "CSS", "Javascript", "Typescript"],
       relatedSites: [],
       coverPicture: "./portfolio-resources/Chatbot/1.jpg",
       backgroundStyle: "Light",
@@ -543,7 +569,7 @@ const json : Profile= {
       ]
     },
     {
-      id: 21,
+      id: 22,
       projectType: "Generic",
       name: "Augmented Reality OpenCV Demo",
       summary: [`This technology demo is an augmented reality application, which shows the integration between Unity, OpenCV, C++, ARToolkit. The idea behind the app is a small game where multiple users (interacting via a local network multiplayer) fight against an enemy and build the scenario using real world objects.`,
@@ -569,7 +595,7 @@ const json : Profile= {
       images: []
     },
     {
-      id: 22,
+      id: 23,
       projectType: "Generic",
       name: "Integrate a React UI in a VB6 application using C++ as bridge",
       summary: [`Argentum Online is a 24-year-old game developed in VB6. With the intention of migrating the code to C++, we decided to re-implement the user interface (UI) in a more modern language for easier maintenance and extension. This also served as a crucial step towards migrating the entire project from VB6 to C++.`,
@@ -577,7 +603,7 @@ const json : Profile= {
       `Given that keyboard and mouse inputs were captured in the VB6 process, while all UI interactions such as button presses were handled in a separate process, efficient communication was essential to synchronize both processes swiftly. This was crucial to ensure that players did not experience any lag or delay while playing.`],
       start: new Date('02 Dec 2022 06:00:01 GMT'),
       end: new Date('02 Nov 2023 06:00:01 GMT'),
-      usedTechologies: ["Visual Basic 6", "C++", "C++14", "C++17", "React", "Javascript", "Windows", "Game Development", "Network", "Sql", "git", "Html", "css"],
+      usedTechologies: ["Visual Basic 6", "C++", "C++14", "C++17", "React", "Javascript", "Windows", "Game Development", "Network", "Sql", "git", "Html", "CSS"],
       relatedSites: [{description:"React Source", url:"https://github.com/matiascalegaris/ao-ui"}, {description:"C++ Source", url:"https://github.com/matiascalegaris/BabelUI"}],
       coverPicture: "./portfolio-resources/ReactCpp.jpg",
       backgroundStyle: "Light",
@@ -587,7 +613,7 @@ const json : Profile= {
       images: []
     },
     {
-      id: 23,
+      id: 24,
       projectType: "Generic",
       name: "Extend data engineering and analytics platform",
       summary: [`Work for one of the biggest end-to-end automation platforms in data engineering, analytics, reporting, machine learning, and data science products.`,
@@ -607,33 +633,7 @@ const json : Profile= {
       previewRows: 1,
       hideInGrid: true,
       images: []
-    },
-    new MobileProject(
-      {
-        id: 24,
-        projectType: "Mobile",
-        name: "PROPERTY MANAGEMENT PLATFORM",
-        summary: [`On 2019 we joined one investor to build this platform in 6 months. The product’s core is allowing property managers and building committees to do the paper work and organize the buildings or condominiums they’ve , including service providers payment management, member management, expense tracking, internal communication with members, votings, accounting and payment collection.`,
-        `The platform is web based for administrators and managers, and has a companion app for members which can also use the web version of it.`],
-        start: new Date('02 Mar 2019 06:00:01 GMT'),
-        end: new Date('02 DeC 2019 06:00:01 GMT'),
-        usedTechologies: ["Angular", "Html", "css", "Javascript", "Typescript"],
-        relatedSites: [],
-        coverPicture: "./portfolio-resources/PropertyManagement/6.png",
-        backgroundStyle: "Light",
-        previewColumns:  1,
-        previewRows: 2,
-        hideInGrid: false,
-        images: ["/portfolio-resources/PropertyManagement/2.png",
-                  "/portfolio-resources/PropertyManagement/3.png",
-                  "/portfolio-resources/PropertyManagement/4.png",
-                  "/portfolio-resources/PropertyManagement/5.png",
-                  "/portfolio-resources/PropertyManagement/6.png",
-                  "/portfolio-resources/PropertyManagement/7.png",
-                  "/portfolio-resources/PropertyManagement/8.png"]
-      },
-      "android"
-    )
+    }
   ]
 }
 
@@ -658,7 +658,7 @@ export const GetSkillList = (projectList : Project[]) : Skill[]=> {
   AddSkill(skills, {name:"C++17", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[], skillType:"language"})
   AddSkill(skills, {name:"Angular", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[], skillType:"language"})
   AddSkill(skills, {name:"Html", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[], skillType:"technology"})
-  AddSkill(skills, {name:"css", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[], skillType:"technology"})
+  AddSkill(skills, {name:"CSS", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[], skillType:"technology"})
   AddSkill(skills, {name:"React", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[], skillType:"technology"})
   AddSkill(skills, {name:"C#", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[],skillType:"language"})
   AddSkill(skills, {name:"Unity3D", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[], skillType:"technology"})
@@ -666,7 +666,7 @@ export const GetSkillList = (projectList : Project[]) : Skill[]=> {
   AddSkill(skills, {name:"Ionic", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[], skillType:"technology"})
   AddSkill(skills, {name:"React Native", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[], skillType:"technology"})
   AddSkill(skills, {name:"Xamarin", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[], skillType:"technology"})
-  AddSkill(skills, {name:"Swift", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[], skillType:"technology"})
+  AddSkill(skills, {name:"Swift", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[], skillType:"language"})
   AddSkill(skills, {name:"Objective C", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[],skillType:"language"})
   AddSkill(skills, {name:"Sql", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[], skillType:"technology"})
   AddSkill(skills, {name:"Windows", time:0, priorityGroup:1, hideOnMain:false, projectIdList:[], skillType:"technology"})
