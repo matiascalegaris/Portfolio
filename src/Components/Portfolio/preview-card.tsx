@@ -6,7 +6,8 @@ export const PreviewCard = ({project} : {project: Project}) => {
   const style : React.CSSProperties = {
     backgroundImage: `url(${project.coverPicture})`,
     gridColumn: `span ${project.previewColumns}`,
-    gridRow: `span ${project.previewRows}`
+    gridRow: `span ${project.previewRows}`,
+    minHeight: `${project.previewRows * 250}px`
   }
   const navigate = useNavigate();
   const onClick = (evt : React.MouseEvent<HTMLElement>) => {

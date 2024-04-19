@@ -3,6 +3,6 @@ import { Project } from './project';
 
 export class Profile {
   workHistory : JobPosition[] = [];
-  summary: string = '';
+  summary: string[] = [];
   projectHistory: Project[] = [];
 }

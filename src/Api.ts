@@ -8,10 +8,10 @@ export const GetResume = () => {
 
 
 const json : Profile= {
-  summary: `I’m a generalist programmer with more than 16 years of experience who loves to work with new technologies and devices.
-  I have done projects for different industries like game studios, big network providers, bank systems and small clients that required custom solutions for their companies.
-  I have experience working with low level languages like C++ doing task like performing optimization and ensure it runs on target hardware.
-  `,
+  summary: [`I’m a generalist programmer with more than 16 years of experience who loves to work with new technologies and devices.`,
+  `I have done projects for different industries like game studios, big network providers, bank systems and small clients that required custom solutions for their companies.`,
+  `I have experience working with low level languages like C++ doing task like performing optimization and ensure it runs on target hardware.`
+  ],
   workHistory :
   [
     {
@@ -579,7 +579,7 @@ const json : Profile= {
       end: new Date('02 Nov 2023 06:00:01 GMT'),
       usedTechologies: ["Visual Basic 6", "C++", "C++14", "C++17", "React", "Javascript", "Windows", "Game Development", "Network", "Sql", "git", "Html", "css"],
       relatedSites: [{description:"React Source", url:"https://github.com/matiascalegaris/ao-ui"}, {description:"C++ Source", url:"https://github.com/matiascalegaris/BabelUI"}],
-      coverPicture: "",
+      coverPicture: "./portfolio-resources/ReactCpp.jpg",
       backgroundStyle: "Light",
       previewColumns:  1,
       previewRows: 1,
@@ -652,45 +652,45 @@ const AddSkill = (skillMap : Map<string, Skill>, skill: Skill) => {
 export const GetSkillList = (projectList : Project[]) : Skill[]=> {
   const skills = new Map<string, Skill>()
 
-  AddSkill(skills, {name:"C++", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
-  AddSkill(skills, {name:"C++11", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
-  AddSkill(skills, {name:"C++14", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
-  AddSkill(skills, {name:"C++17", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
-  AddSkill(skills, {name:"Angular", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
-  AddSkill(skills, {name:"Html", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
-  AddSkill(skills, {name:"css", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
-  AddSkill(skills, {name:"React", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
-  AddSkill(skills, {name:"C#", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
-  AddSkill(skills, {name:"Unity3D", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
-  AddSkill(skills, {name:"Javascript", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
-  AddSkill(skills, {name:"Ionic", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
-  AddSkill(skills, {name:"React Native", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
-  AddSkill(skills, {name:"Xamarin", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
-  AddSkill(skills, {name:"Swift", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
-  AddSkill(skills, {name:"Objective C", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
-  AddSkill(skills, {name:"Sql", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
-  AddSkill(skills, {name:"Windows", time:0, priorityGroup:1, hideOnMain:false, projectIdList:[]})
-  AddSkill(skills, {name:"Linux", time:0, priorityGroup:1, hideOnMain:false, projectIdList:[]})
-  AddSkill(skills, {name:"svn", time:0, priorityGroup:3, hideOnMain:false, projectIdList:[]})
+  AddSkill(skills, {name:"C++", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[], skillType:"language"})
+  AddSkill(skills, {name:"C++11", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[], skillType:"language"})
+  AddSkill(skills, {name:"C++14", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[], skillType:"language"})
+  AddSkill(skills, {name:"C++17", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[], skillType:"language"})
+  AddSkill(skills, {name:"Angular", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[], skillType:"language"})
+  AddSkill(skills, {name:"Html", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[], skillType:"technology"})
+  AddSkill(skills, {name:"css", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[], skillType:"technology"})
+  AddSkill(skills, {name:"React", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[], skillType:"technology"})
+  AddSkill(skills, {name:"C#", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[],skillType:"language"})
+  AddSkill(skills, {name:"Unity3D", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[], skillType:"technology"})
+  AddSkill(skills, {name:"Javascript", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[],skillType:"language"})
+  AddSkill(skills, {name:"Ionic", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[], skillType:"technology"})
+  AddSkill(skills, {name:"React Native", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[], skillType:"technology"})
+  AddSkill(skills, {name:"Xamarin", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[], skillType:"technology"})
+  AddSkill(skills, {name:"Swift", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[], skillType:"technology"})
+  AddSkill(skills, {name:"Objective C", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[],skillType:"language"})
+  AddSkill(skills, {name:"Sql", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[], skillType:"technology"})
+  AddSkill(skills, {name:"Windows", time:0, priorityGroup:1, hideOnMain:false, projectIdList:[], skillType:"technology"})
+  AddSkill(skills, {name:"Linux", time:0, priorityGroup:1, hideOnMain:false, projectIdList:[], skillType:"technology"})
+  AddSkill(skills, {name:"svn", time:0, priorityGroup:3, hideOnMain:false, projectIdList:[], skillType:"technology"})
   
   
-  AddSkill(skills, {name:"Oracle", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
-  AddSkill(skills, {name:"Sql Server", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
-  AddSkill(skills, {name:"Mobile", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
-  AddSkill(skills, {name:"Android", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})  
-  AddSkill(skills, {name:"iOS", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})  
-  AddSkill(skills, {name:"Visual Basic 6", time:0, priorityGroup:0, hideOnMain:true, projectIdList:[]})  
-  AddSkill(skills, {name:"git", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
-  AddSkill(skills, {name:"Typescript", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
-  AddSkill(skills, {name:"Xamarin Forms", time:0, priorityGroup:0, hideOnMain:true, projectIdList:[]})
-  AddSkill(skills, {name:"WebGL", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[]})
-  AddSkill(skills, {name:"OpenCv", time:0, priorityGroup:0, hideOnMain:true, projectIdList:[]})
-  AddSkill(skills, {name:"MFC", time:0, priorityGroup:0, hideOnMain:true, projectIdList:[]})
-  AddSkill(skills, {name:"AR", time:0, priorityGroup:0, hideOnMain:true, projectIdList:[]})
-  AddSkill(skills, {name:"Network", time:0, priorityGroup:0, hideOnMain:true, projectIdList:[]})
-  AddSkill(skills, {name:"Kinect", time:0, priorityGroup:0, hideOnMain:true, projectIdList:[]})
-  AddSkill(skills, {name:"Visual Studio", time:0, priorityGroup:0, hideOnMain:true, projectIdList:[]})
-  AddSkill(skills, {name:"Game Development", time:0, priorityGroup:0, hideOnMain:true, projectIdList:[]})
+  AddSkill(skills, {name:"Oracle", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[], skillType:"technology"})
+  AddSkill(skills, {name:"Sql Server", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[], skillType:"technology"})
+  AddSkill(skills, {name:"Mobile", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[], skillType:"technology"})
+  AddSkill(skills, {name:"Android", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[], skillType:"technology"})  
+  AddSkill(skills, {name:"iOS", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[], skillType:"technology"})  
+  AddSkill(skills, {name:"Visual Basic 6", time:0, priorityGroup:0, hideOnMain:true, projectIdList:[], skillType:"technology"})  
+  AddSkill(skills, {name:"git", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[], skillType:"technology"})
+  AddSkill(skills, {name:"Typescript", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[], skillType:"language"})
+  AddSkill(skills, {name:"Xamarin Forms", time:0, priorityGroup:0, hideOnMain:true, projectIdList:[], skillType:"technology"})
+  AddSkill(skills, {name:"WebGL", time:0, priorityGroup:0, hideOnMain:false, projectIdList:[], skillType:"technology"})
+  AddSkill(skills, {name:"OpenCv", time:0, priorityGroup:0, hideOnMain:true, projectIdList:[], skillType:"technology"})
+  AddSkill(skills, {name:"MFC", time:0, priorityGroup:0, hideOnMain:true, projectIdList:[], skillType:"technology"})
+  AddSkill(skills, {name:"AR", time:0, priorityGroup:0, hideOnMain:true, projectIdList:[], skillType:"technology"})
+  AddSkill(skills, {name:"Network", time:0, priorityGroup:0, hideOnMain:true, projectIdList:[], skillType:"technology"})
+  AddSkill(skills, {name:"Kinect", time:0, priorityGroup:0, hideOnMain:true, projectIdList:[], skillType:"technology"})
+  AddSkill(skills, {name:"Visual Studio", time:0, priorityGroup:0, hideOnMain:true, projectIdList:[], skillType:"technology"})
+  AddSkill(skills, {name:"Game Development", time:0, priorityGroup:0, hideOnMain:true, projectIdList:[], skillType:"technology"})
 
   projectList.forEach( project => {
     project.usedTechologies.forEach( techName => {
