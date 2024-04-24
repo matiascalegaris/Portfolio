@@ -5,7 +5,7 @@ import { SkillList } from "./skill-list";
 
 export const ChatbotDetails = ({projectDetails} : {projectDetails: Project}) => {
   return (
-    <article className="profile-grid">
+    <article className="profile-grid mobile-padding">
       <h2 className="center-columns">{projectDetails.name}</h2>
       {
         projectDetails.summary.map( summary => (

@@ -11,7 +11,7 @@ import { ChatbotDetails } from "./chatbot-details";
 
 export const ProjectDetails = ({resume} : {resume: Profile}) => {
   const params = useParams<{id: string}>();
-  const id = Number(params.id) < resume.projectHistory.length ? Number(params.id) : resume.projectHistory.length - 1
+  const id = Number(params.id) <= resume.projectHistory.length ? Number(params.id) : resume.projectHistory.length
   const projectDetails = resume.projectHistory.find( project => (project.id === id))
   const navigate = useNavigate();
   const goToPrevProject = () => {

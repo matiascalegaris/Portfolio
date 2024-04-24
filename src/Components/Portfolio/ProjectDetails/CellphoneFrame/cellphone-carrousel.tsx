@@ -2,11 +2,10 @@ import { CellphoneType } from "../../../../Models/project"
 
 const iphoneStyle : React.CSSProperties = {
   width: "271px",
-  //height: "550px",
+  height: "550px",
   position: "relative",
   justifySelf: "center",
   padding: "6px 8px",
-  aspectRatio: 271/550
 }
 
 const iphoneContent : React.CSSProperties = {
@@ -18,12 +17,11 @@ const iphoneContent : React.CSSProperties = {
 }
 
 const androidStyle : React.CSSProperties = {
-  width: "271px",
-  //height: "550px",
+  width: "283px",
+  height: "567px",
   position: "relative",
   justifySelf: "center",
-  padding: "50px 12px",
-  aspectRatio: 770/1500
+  padding: "50px 10px",
 }
 
 const androidContent : React.CSSProperties = {
@@ -36,7 +34,7 @@ const androidContent : React.CSSProperties = {
 
 const noPhone : React.CSSProperties = {
   width: "271px",
-  //height: "550px",
+  height: "527px",
   position: "relative",
   justifySelf: "center",
   padding: "0",

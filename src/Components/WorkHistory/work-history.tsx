@@ -7,7 +7,7 @@ export const WorkHistory = ({jobList } : { jobList: JobPosition[]}) => {
     return b.id - a.id;
   })
   return (
-    <section className="main-grid">
+    <section className="main-grid work-history">
       {
         orderedList.map( job=> (
           <JobEntry key={job.id} jobInfo={job} className={"spacer"}/>
