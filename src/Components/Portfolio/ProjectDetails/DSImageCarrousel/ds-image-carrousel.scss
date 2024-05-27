@@ -1,8 +1,14 @@
 .ds-area {
   position: relative;
-
+  --dsFrameWidth: 550px;
+  --dsFrameHeight: 564px;
   --screenWidth: 256px;
-  --screenHeigh: 192px;  
+  --screenHeigh: 192px;
+  --sizeRate: 1;
+  @media only screen and (max-width: 1000px) {
+    --sizeRate: 0.6;
+  }
+  
   img {
     width: var(--screenWidth);
     height: calc(var(--screenHeigh) * 2);
@@ -15,24 +21,24 @@
   }
   .top-screen {
     position: absolute;
-    left: 148px;
-    top: 38px;
-    height: var(--screenHeigh);
-    width: var(--screenWidth);
+    left: calc(148px* var(--sizeRate));
+    top: calc(38px* var(--sizeRate));
+    height: calc(var(--screenHeigh) * var(--sizeRate));
+    width: calc(var(--screenWidth) * var(--sizeRate));
     overflow: hidden;    
   }
   .bottom-screen {
     position: absolute;
-    left: 148px;
-    top: 325px;
-    height: var(--screenHeigh);
-    width: var(--screenWidth);
+    left: calc(148px* var(--sizeRate));
+    top: calc(325px* var(--sizeRate));
+    height: calc(var(--screenHeigh) * var(--sizeRate));
+    width: calc(var(--screenWidth) * var(--sizeRate));
     overflow: hidden;    
     .bottom-screen-img-container {
       position: relative;
-      width: var(--screenWidth);
-      min-width: var(--screenWidth);
-      height: var(--screenHeigh);
+      width: calc(var(--screenWidth) * var(--sizeRate));
+      min-width: calc(var(--screenWidth) * var(--sizeRate));
+      height: calc(var(--screenHeigh) * var(--sizeRate));
       .bottom-img {
         position: absolute;
         left: 0;
@@ -42,8 +48,8 @@
     
   }
   .ds {
-    width: 550px;
-    height: 564px;
+    width: calc(var(--dsFrameWidth)* var(--sizeRate));
+    height: calc(var(--dsFrameHeight)* var(--sizeRate));
     position: relative;
   }
 }

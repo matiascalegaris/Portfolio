@@ -2,6 +2,12 @@
   display: grid;
   grid-template-columns: 20% 4fr 5fr 20%;
   gap: 10px;
+  @media only screen and (max-width: 1000px) {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   h5 {
     margin-bottom: 0;
   }

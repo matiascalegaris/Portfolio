@@ -1,49 +1,42 @@
 import './filter-bar.scss'
 import { Skill } from "../../../Models/skill";
-import { MutableRefObject, useRef, useState } from 'react';
+import { useState } from 'react';
 
-const useFocus = (): [any, () => void] => {
-  const htmlElRef: MutableRefObject<any> = useRef(null);
-  const setFocus = (): void => {
-    htmlElRef?.current?.focus?.();
-  };
+type SkillFilter = {
+  displayName: string;
+  skillFilter: string;
+}
 
-  return [htmlElRef, setFocus];
-};
+const SkillFilters : SkillFilter[] = [{ displayName:"C++", skillFilter:"C++"},
+                      { displayName:"Unity", skillFilter:"Unity3D"},
+                      { displayName:"Mobile", skillFilter:"Mobile"},
+                      { displayName:"Web", skillFilter:"Web"}]
 
-export const FilterBar = ({skillList, activeFilters, addFilter} : 
-                          {skillList : Skill[], activeFilters: Skill[],addFilter: (skill : Skill)=> void}) => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [inputRef, setInputFocus] = useFocus()
+export const FilterBar = ({activeFilters, addFilter, removeFilter, clearFilters} : 
+                          {activeFilters: string[],
+                            addFilter: (skill : string)=> void, 
+                            removeFilter: (skill : string)=> void,
+                            clearFilters: () => void}) => {
 
-  const onUpdateSearch = (evt : React.SyntheticEvent) => {
-    let target = evt.target as HTMLInputElement;
-    setSearchTerm(target.value);
+  const selectTag = (filter : SkillFilter) => {
+    if (activeFilters.includes(filter.skillFilter)) {
+      removeFilter(filter.skillFilter);
+    }
+    else {
+      addFilter(filter.skillFilter);
+    }
+    
   }
-  let lowerSearch = searchTerm.toLowerCase();
-  skillList = skillList.filter( skill => (skill.name.toLowerCase().includes(lowerSearch) && !activeFilters.find( el => el.name === skill.name)))
-
-  const selectSkill = (skill : Skill) => {
-    setSearchTerm("");
-    addFilter(skill);
-    setInputFocus();
+  const selectAll = () => {
+    clearFilters();
   }
   return (
     <div className='filter-bar'>
-      <svg viewBox="0 0 16 16" className="search-icon">
-        <path d="m10.582 9.874 4.625 4.626-.707.707-4.626-4.625a6 6 0 1 1 .707-.707ZM6 11A5 5 0 1 0 6 1a5 5 0 0 0 0 10Z"></path>
-      </svg>
-      <input ref={inputRef} value={searchTerm} onChange={onUpdateSearch} placeholder='Filter project using tech'></input>
+      <div className={(activeFilters.length == 0 ? 'selected-tag' : '') + ' filter-tag '} onClick={()=> selectAll()}>All</div>
       {
-        searchTerm?.length > 0 ?
-        <div className='option-menu'>
-        {
-          skillList.map( (el) => (
-            <div className='selector-option' key={el.name} onClick={() => (selectSkill(el))}>{el.name}</div>
-          ))
-        }
-        </div>
-        : null
+        SkillFilters.map( skill => (
+          <div className={(activeFilters.includes(skill.skillFilter) ? 'selected-tag' : '') + ' filter-tag '} onClick={() => selectTag(skill)}>{skill.displayName}</div>
+        ))
       }
     </div>
   )}

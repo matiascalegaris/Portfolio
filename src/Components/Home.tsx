@@ -31,7 +31,7 @@ export const Home = ({resume} : {resume: Profile | null}) => {
           }
 
           <h4>Programming Languages</h4>
-          <ul>
+          <ul className="skill-list">
             {
               programmingLanguages.map( (el, index) => (
                 <SkillTag key={index} skill={el}/>
@@ -39,7 +39,7 @@ export const Home = ({resume} : {resume: Profile | null}) => {
             }            
           </ul>
           <h4>Techonologies</h4>
-          <ul>
+          <ul className="skill-list">
             {
               techologies.map( (el, index) => (
                 <SkillTag key={index} skill={el}/>
@@ -47,5 +47,6 @@ export const Home = ({resume} : {resume: Profile | null}) => {
             }            
           </ul>
         </div>
+        
       </section>
   )}

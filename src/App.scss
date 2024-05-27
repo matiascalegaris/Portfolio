@@ -6,6 +6,9 @@
     box-sizing: border-box;
   }
 }
+* {
+ //background: #282c3423;
+}
 .App {
 }
 
@@ -48,6 +51,10 @@
   display: grid;
   gap: 10px;
   grid-template-columns: 1fr 1fr calc(var(--centerRenderArea) * 0.7) calc(var(--centerRenderArea) * 0.3) 1fr 1fr;
+  @media only screen and (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .main-grid {
@@ -118,6 +125,18 @@
   margin-top: 20px;
 }
 
+.skill-list {
+  @media only screen and (max-width: 600px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .skill-tag {
-  
+}
+
+.mobile-padding {
+  @media only screen and (max-width: 600px) {
+    padding: 20px;
+  }
 }

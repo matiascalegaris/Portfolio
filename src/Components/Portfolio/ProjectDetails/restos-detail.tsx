@@ -6,13 +6,13 @@ import { SkillList } from "./skill-list";
 
 export const RestosDetails = ({projectDetails} : {projectDetails: RestosProject}) => {
   return (
-    <article className="profile-grid">
+    <article className="profile-grid mobile-padding">
       <h2 className="center-columns">{projectDetails.name}</h2>
       {
         projectDetails.summary.map( summary => (
           <p className="center-columns">{summary}</p>
         ))        
-      }   
+      }
       <div className="center-columns">
         <h4>Table App</h4>
         <TabletFrame><img className="full-width full-height" src={projectDetails.images[1]}/></TabletFrame>

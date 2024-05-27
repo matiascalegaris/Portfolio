@@ -4,16 +4,15 @@ import { SkillList } from "./skill-list";
 
 export const GenericProjectDetails = ({projectDetails} : {projectDetails : Project}) => {
   return (
-    <article className="profile-grid" >
+    <article className="profile-grid mobile-padding" >
       <h2 className="center-columns">{projectDetails.name}</h2>
       {
         projectDetails.summary.map( summary => (
           <p className="center-columns">{summary}</p>
         ))        
-      }      
+      }
       {
-        projectDetails.relatedSites.map ( sites =>(
-          
+        projectDetails.relatedSites.map ( sites =>(          
           <span className="center-columns">{sites.description}<br/><a href={sites.url}>{sites.url}</a></span>
         ))        
       }   

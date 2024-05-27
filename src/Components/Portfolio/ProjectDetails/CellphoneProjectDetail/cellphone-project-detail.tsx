@@ -5,7 +5,7 @@ import { SkillList } from "../skill-list"
 
 export const CellphoneProjectDetail = ({projectDetails} : {projectDetails : MobileProject}) => {
   return (
-    <article className="ds-grid">
+    <article className="ds-grid mobile-padding">
       <h2 className="ds-grid-main">{projectDetails.name}</h2>
       <div className="ds-grid-main">
       {
