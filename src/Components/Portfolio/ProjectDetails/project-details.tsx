@@ -9,11 +9,15 @@ import { RobotTournamentDetails } from "./RobotTournament/robot-tournament";
 import { RestosDetails } from "./restos-detail";
 import { ChatbotDetails } from "./chatbot-details";
 
-export const ProjectDetails = ({resume} : {resume: Profile}) => {
+export const ProjectDetails = ({resume} : {resume: Profile | null}) => {
   const params = useParams<{id: string}>();
+  const navigate = useNavigate();
+  if (!resume) {
+    return <div></div>
+  }
   const id = Number(params.id) < resume.projectHistory.length ? Number(params.id) : resume.projectHistory.length - 1
   const projectDetails = resume.projectHistory.find( project => (project.id === id))
-  const navigate = useNavigate();
+  
   const goToPrevProject = () => {
     navigate("../../project/" + (id - 1))
   }

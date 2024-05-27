@@ -21,6 +21,7 @@ export class Project {
   hideInGrid: boolean = false;
   images : string[] = [];
   video? : string;
+  jobPositionId: number | null = null;
   constructor(project : Project) {
     this.id = project.id;
     this.projectType  = project.projectType;
@@ -36,7 +37,8 @@ export class Project {
     this.hideInGrid = project.hideInGrid;
     this.images = project.images;
     this.video = project.video;
-    this.backgroundStyle = project.backgroundStyle
+    this.backgroundStyle = project.backgroundStyle;
+    this.jobPositionId = project.jobPositionId;
   }
 }
 export type CellphoneType = "android" | "iphone" | "none";

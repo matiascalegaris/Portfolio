@@ -1,5 +1,6 @@
 import './job-entry.scss'
 import { JobPosition } from "../../../Models/job-position";
+import { useNavigate } from 'react-router-dom';
 
 function GetFormatedDate (date : Date | null) {
   const monthNames = ["Jan", "Feb", "Mar", "Apr",
@@ -12,7 +13,12 @@ function GetFormatedDate (date : Date | null) {
   return "Now";
 }
 
+
 export const JobEntry = ( {jobInfo, className } : { jobInfo : JobPosition, className : string | null}) => {
+  const navigate = useNavigate();
+  const onSelectProject = (projectId : number) => {
+    navigate("../project/" + projectId)
+  }
   return (
     <article className={`job-entry  ${className}`}>
       <h3>{jobInfo.title}</h3>
@@ -21,6 +27,13 @@ export const JobEntry = ( {jobInfo, className } : { jobInfo : JobPosition, class
         jobInfo.summary.map( summary => (
           <p>{summary}</p>
         ))        
-      }   
+      }
+      <section className='project-history'>
+        {
+          jobInfo.projectList.map( project => (
+            <div className='project-link' key={project.id} onClick={()=>{onSelectProject(project.id)}}>{project.name}</div>
+          ))
+        }
+      </section>
     </article>
   )}

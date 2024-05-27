@@ -5,10 +5,15 @@ import { Home } from './Components/Home';
 import { Portfolio } from './Components/Portfolio/portfolio';
 import { ProjectDetails } from './Components/Portfolio/ProjectDetails/project-details';
 import { GetResume } from './Api';
+import { useEffect, useState } from 'react';
+import { Profile } from './Models/profile';
 
 
 function App() {
-  const resume = GetResume();
+  const [resume, setResume] = useState<Profile | null>(GetResume());
+  useEffect(() => {
+    setResume(resume)
+  },[])
   return (
     <div className="App">
       <Header/>

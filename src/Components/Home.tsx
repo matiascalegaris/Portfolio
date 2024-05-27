@@ -4,7 +4,10 @@ import { Profile } from "../Models/profile";
 import { SkillTag } from "./SkillTag";
 import { WorkHistory } from "./WorkHistory/work-history"
 
-export const Home = ({resume} : {resume: Profile}) => {
+export const Home = ({resume} : {resume: Profile | null}) => {
+  if (!resume) {
+    return <div></div>
+  }
   let skillList = GetSkillList(resume.projectHistory)
   skillList = skillList.map( el => {
     el.time = Math.round(el.time);
@@ -20,7 +23,7 @@ export const Home = ({resume} : {resume: Profile}) => {
           <WorkHistory jobList={resume.workHistory}/>
         </div>
         <div className='secondary-grid about-me-style'>
-          <h3>About me</h3>
+          <h3 data-tooltip-id="my-tooltip">About me</h3>
           {
             resume.summary.map( summary => (
               <p>{summary}</p>
@@ -35,9 +38,6 @@ export const Home = ({resume} : {resume: Profile}) => {
               ))
             }            
           </ul>
-          <Tooltip anchorSelect="skill-tag" place="bottom">
-            Hello world!
-          </Tooltip>
           <h4>Techonologies</h4>
           <ul>
             {

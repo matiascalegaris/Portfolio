@@ -6,8 +6,11 @@ import { PreviewCard } from './preview-card';
 import { Skill } from '../../Models/skill';
 import { Profile } from '../../Models/profile';
 
-export const Portfolio = ({resume} : {resume: Profile})=> {
+export const Portfolio = ({resume} : {resume: Profile | null})=> {
   const [activeFilters, setActiveFilters] = useState<Skill[]>([])
+  if (!resume) {
+    return <div></div>
+  }
   const skillList = GetSkillList(resume.projectHistory);
   let filteredList = resume.projectHistory.filter(e => (!e.hideInGrid))
   if (activeFilters.length > 0) {
