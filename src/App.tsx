@@ -14,11 +14,18 @@ function App() {
   useEffect(() => {
     setResume(resume)
   },[])
+  if (!resume) {
+    return  (
+            <div className="App">
+              <Header/>
+            </div>
+  )}
   return (
     <div className="App">
       <Header/>
       <Routes>
         <Route path='/' element={<Portfolio resume={resume}/>} />
+        <Route path='/:filters' element={<Portfolio resume={resume}/>} />
         <Route path='/aboutme' element={<Home resume={resume}/>} />
         <Route path='/project/:id' element={<ProjectDetails resume={resume}/>}/>
       </Routes>

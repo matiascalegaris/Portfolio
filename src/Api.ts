@@ -5,7 +5,7 @@ import { Skill } from "./Models/skill";
 
 export const GetResume = () => {
   const json : Profile = {
-    summary: [`I’m a generalist programmer with more than 16 years of experience who loves to work with new technologies and devices.`,
+    summary: [`I’m a generalist programmer with more than 18 years of experience who loves to work with new technologies and devices.`,
     `I have done projects for different industries like game studios, big network providers, bank systems and small clients that required custom solutions for their companies.`,
     `I have experience working with low level languages like C++ doing task like performing optimization and ensure it runs on target hardware.`
     ],
@@ -116,7 +116,7 @@ export const GetResume = () => {
         title: 'Contractor',
         companyName: 'Toptal',
         startDate : new Date('02 Dec 2019 00:00:00 GMT'),
-        endDate: null,
+        endDate: new Date('15 Jul 2024 00:00:00 GMT'),
         summary: [`Work for one of the biggest end-to-end automation platforms in 
         data engineering, analytics, reporting, machine learning, and 
         data science products.`,
@@ -140,7 +140,20 @@ export const GetResume = () => {
         client guidelines to code the track mixer and then help 
         designing and implementing the sampler.`],
         projectList: []
+      },
+      {
+        id: 9,
+        title: 'Senior Staff Software Engineer',
+        companyName: 'Svitla',
+        startDate : new Date('15 Jul 2024 00:00:00 GMT'),
+        endDate: null,
+        summary: [`Maintained and enhanced the company’s C#-based retail POS system, ensuring stability and compatibility across stores`,
+        `Designed and implemented payment integration protocols to communicate with various card readers and payment networks, enabling secure and reliable credit and debit transactions`,
+        `Created a network simulator to perform local testing of payment flows and developed internal tools to improve daily productivity for the development team`
+        ],
+        projectList: []
       }
+      
     ],
     projectHistory: [    
       {
@@ -202,7 +215,6 @@ export const GetResume = () => {
                   "/portfolio-resources/SaveTheTurtles/img3.jpg",
                   "/portfolio-resources/SaveTheTurtles/img4.jpg"]      
       },
-      
       {
         id: 4,
         projectType: "DS",
@@ -271,7 +283,7 @@ export const GetResume = () => {
         `We used TypeScript as a base language to improve code quality since we were used to strongly typed languages. The last version of the API is able to load .fz3d files and manages several shader materials (diffuse, specular, normal map, etc) and implements a scene graph, matching with the core Flare's rendering API.`],
         start: new Date('02 Oct 2012 06:00:01 GMT'),
         end: new Date('02 Nov 2012 06:00:01 GMT'),
-        usedTechologies: ["Typescript", "WebGL", "Javascript", "svn"],
+        usedTechologies: ["Typescript", "WebGL", "Javascript", "svn", "Web"],
         relatedSites: [],
         coverPicture: "./portfolio-resources/Flare3d/cover.jpg",
         backgroundStyle: "Dark",
@@ -360,7 +372,7 @@ export const GetResume = () => {
           `This app was made with Xamarin Android`],
           start: new Date('02 Oct 2016 06:00:01 GMT'),
           end: new Date('02 Jul 2017 06:00:01 GMT'),
-          usedTechologies: ["Ionic", "Xamarin", "Android", "git", "C#"],
+          usedTechologies: ["Ionic", "Xamarin", "Android", "git", "C#", "Mobile"],
           relatedSites: [],
           coverPicture: "./portfolio-resources/FieldForce/App1.jpeg",
           backgroundStyle: "Light",
@@ -384,7 +396,7 @@ export const GetResume = () => {
           `Once a user submit his desired location to send the package, the shipper app tracks it and searchs for messengers available to delivery it. After arriving and tracking the shipper GPS, the user can confirm the shipment and the transaction takes place using MercadoPago.`],
           start: new Date('02 Jan 2017 06:00:01 GMT'),
           end: new Date('02 Nov 2017 06:00:01 GMT'),
-          usedTechologies: ["Swift", "React Native", "Android", "iOS", "git", "Html"],
+          usedTechologies: ["Swift", "React Native", "Android", "iOS", "git", "Html", "Mobile"],
           relatedSites: [],
           coverPicture: "./portfolio-resources/Yalollevo/yalollevo4.png",
           backgroundStyle: "Light",
@@ -409,7 +421,7 @@ export const GetResume = () => {
           summary: [`This is a consultancy project which tracks the client’s consultants activity in real time. It was done in Xamarin Forms for iOS and Android. In addition, this app has a GPS tracking module to track its users when they’re doing auditories. Please note that app name and logo has been changed`],
           start: new Date('02 Nov 2017 06:00:01 GMT'),
           end: new Date('02 Mar 2018 06:00:01 GMT'),
-          usedTechologies: ["Xamarin", "Xamarin Forms", "C#","Android", "iOS", "git"],
+          usedTechologies: ["Xamarin", "Xamarin Forms", "C#","Android", "iOS", "git", "Mobile"],
           relatedSites: [],
           coverPicture: "./portfolio-resources/ChecklistApp/tiendacheck1.png",
           backgroundStyle: "Light",
@@ -436,7 +448,7 @@ export const GetResume = () => {
         `(The color palletes on the pictures are messed up since I do not own this IP)`],
         start: new Date('02 Nov 2017 06:00:01 GMT'),
         end: new Date('02 Mar 2018 06:00:01 GMT'),
-        usedTechologies: ["Ionic", "Angular","Android", "iOS", "git" , "Typescript", "Javascript", "Html", "CSS"],
+        usedTechologies: ["Ionic", "Angular","Android", "iOS", "git" , "Typescript", "Javascript", "Html", "CSS", "Mobile", "Web"],
         relatedSites: [],
         coverPicture: "./portfolio-resources/Restos/Mesa.png",
         backgroundStyle: "Light",
@@ -460,7 +472,7 @@ export const GetResume = () => {
           For the 2019’s edition, we developed an app ecosystem in order to help referees and assistants to report the score of the match in real time. Also, the platform did the tournament  setup and progression. Solving challenges like a really crowded place where wifi networks won’t be realiable (despite of being in our own private network), we implemented a minimum communication system to minimize the latency of the network.`],
           start: new Date('02 Jun 2018 06:00:01 GMT'),
           end: new Date('02 Sep 2018 06:00:01 GMT'),
-          usedTechologies: ["Ionic", "Angular","Android", "Unity3D", "git", "C#", "Typescript", "Javascript", "Html", "CSS"],
+          usedTechologies: ["Ionic", "Angular","Android", "Unity3D", "git", "C#", "Typescript", "Javascript", "Html", "CSS", "Mobile", "Web"],
           relatedSites: [{description:"video", url:"https://vimeo.com/357201057"}],
           coverPicture: "./portfolio-resources/RoboTournament/Event3.jpg",
           backgroundStyle: "Dark",
@@ -551,7 +563,7 @@ export const GetResume = () => {
           `The platform is web based for administrators and managers, and has a companion app for members which can also use the web version of it.`],
           start: new Date('02 Mar 2019 06:00:01 GMT'),
           end: new Date('02 DeC 2019 06:00:01 GMT'),
-          usedTechologies: ["Angular", "Html", "CSS", "Javascript", "Typescript"],
+          usedTechologies: ["Angular", "Html", "CSS", "Javascript", "Typescript", "Mobile"],
           relatedSites: [],
           coverPicture: "./portfolio-resources/PropertyManagement/6.png",
           backgroundStyle: "Light",
@@ -577,7 +589,7 @@ export const GetResume = () => {
         `The backend is integrated with our client’s system so the bots can be tested in the same page where the user does the design.`],
         start: new Date('02 Jun 2019 06:00:01 GMT'),
         end: new Date('02 Oct 2019 06:00:01 GMT'),
-        usedTechologies: ["Angular", "Html", "CSS", "Javascript", "Typescript"],
+        usedTechologies: ["Angular", "Html", "CSS", "Javascript", "Typescript", "Web"],
         relatedSites: [],
         coverPicture: "./portfolio-resources/Chatbot/1.jpg",
         backgroundStyle: "Light",
@@ -610,7 +622,7 @@ export const GetResume = () => {
         `• Native code linking (via C#'s pInvoke and native build DLLs).`],
         start: new Date('02 Feb 2016 06:00:01 GMT'),
         end: new Date('02 Jul 2016 06:00:01 GMT'),
-        usedTechologies: ["OpenCv", "C++", "C++11", "C++14", "Unity3D", "AR", "Windows", "Android"],
+        usedTechologies: ["OpenCv", "C++", "C++11", "C++14", "Unity3D", "AR", "Windows", "Android", "Mobile"],
         relatedSites: [],
         coverPicture: "./portfolio-resources/ARDemo.png",
         backgroundStyle: "Dark",
@@ -630,7 +642,7 @@ export const GetResume = () => {
         `Given that keyboard and mouse inputs were captured in the VB6 process, while all UI interactions such as button presses were handled in a separate process, efficient communication was essential to synchronize both processes swiftly. This was crucial to ensure that players did not experience any lag or delay while playing.`],
         start: new Date('02 Dec 2022 06:00:01 GMT'),
         end: new Date('02 Nov 2023 06:00:01 GMT'),
-        usedTechologies: ["Visual Basic 6", "C++", "C++14", "C++17", "React", "Javascript", "Windows", "Game Development", "Network", "Sql", "git", "Html", "CSS"],
+        usedTechologies: ["Visual Basic 6", "C++", "C++14", "C++17", "React", "Javascript", "Windows", "Game Development", "Network", "Sql", "git", "Html", "CSS", "Web"],
         relatedSites: [{description:"React Source", url:"https://github.com/matiascalegaris/ao-ui"}, {description:"C++ Source", url:"https://github.com/matiascalegaris/BabelUI"}],
         coverPicture: "./portfolio-resources/ReactCpp.jpg",
         backgroundStyle: "Light",
@@ -661,6 +673,27 @@ export const GetResume = () => {
         previewRows: 1,
         hideInGrid: true,
         jobPositionId: 8,
+        images: []
+      },
+      {
+        id: 25,
+        projectType: "Generic",
+        name: "Extend data engineering and analytics platform",
+        summary: [
+          `Maintained and enhanced the company’s C#-based retail POS system, ensuring stability and compatibility across stores`,
+          `Designed and implemented payment integration protocols to communicate with various card readers and payment networks, enabling secure and reliable credit and debit transactions`,
+          `Created a network simulator to perform local testing of payment flows and developed internal tools to improve daily productivity for the development team`
+        ],
+        start: new Date('15 Jul 2024 06:00:01 GMT'),
+        end: null,
+        usedTechologies: ["C++", "C++11", "C++14", "C#", "Windows", "Linux", "git"],
+        relatedSites: [],
+        coverPicture: "",
+        backgroundStyle: "Light",
+        previewColumns:  1,
+        previewRows: 1,
+        hideInGrid: true,
+        jobPositionId: 9,
         images: []
       }
     ]
@@ -725,6 +758,7 @@ export const GetSkillList = (projectList : Project[]) : Skill[]=> {
   AddSkill(skills, new Skill("Kinect", null, true, "technology"))
   AddSkill(skills, new Skill("Visual Studio", null, true, "technology"))
   AddSkill(skills, new Skill("Game Development", null, true, "technology"))
+  AddSkill(skills, new Skill("Web", null, true, "technology"))
 
   projectList.forEach( project => {
     project.usedTechologies.forEach( techName => {

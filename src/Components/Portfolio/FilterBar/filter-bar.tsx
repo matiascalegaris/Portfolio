@@ -35,7 +35,7 @@ export const FilterBar = ({activeFilters, addFilter, removeFilter, clearFilters}
       <div className={(activeFilters.length == 0 ? 'selected-tag' : '') + ' filter-tag '} onClick={()=> selectAll()}>All</div>
       {
         SkillFilters.map( skill => (
-          <div className={(activeFilters.includes(skill.skillFilter) ? 'selected-tag' : '') + ' filter-tag '} onClick={() => selectTag(skill)}>{skill.displayName}</div>
+          <div key={skill.displayName} className={(activeFilters.includes(skill.skillFilter) ? 'selected-tag' : '') + ' filter-tag '} onClick={() => selectTag(skill)}>{skill.displayName}</div>
         ))
       }
     </div>

@@ -1,4 +1,3 @@
-import { Tooltip } from "react-tooltip";
 import { GetSkillList } from "../Api";
 import { Profile } from "../Models/profile";
 import { SkillTag } from "./SkillTag";
@@ -23,10 +22,10 @@ export const Home = ({resume} : {resume: Profile | null}) => {
           <WorkHistory jobList={resume.workHistory}/>
         </div>
         <div className='secondary-grid about-me-style'>
-          <h3 data-tooltip-id="my-tooltip">About me</h3>
+          <h3>About me</h3>
           {
-            resume.summary.map( summary => (
-              <p>{summary}</p>
+            resume.summary.map( (summary, index) => (
+              <p key={index}>{summary}</p>
             ))        
           }
 

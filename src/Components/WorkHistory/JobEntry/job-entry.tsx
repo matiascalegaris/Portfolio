@@ -14,26 +14,31 @@ function GetFormatedDate (date : Date | null) {
 }
 
 
-export const JobEntry = ( {jobInfo, className } : { jobInfo : JobPosition, className : string | null}) => {
+export const JobEntry = ( 
+  {jobInfo, className, hideProjects = false } : 
+  {jobInfo : JobPosition, className : string | null, hideProjects : boolean}) => {
   const navigate = useNavigate();
   const onSelectProject = (projectId : number) => {
     navigate("../project/" + projectId)
   }
   return (
-    <article className={`job-entry  ${className}`}>
+    <article key={jobInfo.id} className={`job-entry  ${className}`}>
       <h3>{jobInfo.title}</h3>
       <h4>{jobInfo.companyName} {GetFormatedDate(jobInfo.startDate)} - {GetFormatedDate(jobInfo.endDate)}</h4>
       {
-        jobInfo.summary.map( summary => (
-          <p>{summary}</p>
+        jobInfo.summary.map( (summary, index) => (
+          <p key={index}>{summary}</p>
         ))        
       }
-      <section className='project-history'>
-        {
-          jobInfo.projectList.map( project => (
-            <div className='project-link' key={project.id} onClick={()=>{onSelectProject(project.id)}}>{project.name}</div>
-          ))
-        }
-      </section>
+      {
+        !hideProjects &&
+        <section className='project-history'>
+          {
+            jobInfo.projectList.map( project => (
+              <div className='project-link' key={project.id} onClick={()=>{onSelectProject(project.id)}}>{project.name}</div>
+            ))
+          }
+        </section>
+      }
     </article>
   )}

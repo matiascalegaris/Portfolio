@@ -133,6 +133,20 @@
 }
 
 .skill-tag {
+  a {
+    color: black;
+    text-decoration: none;
+    &:visited {
+      text-decoration: none;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+    
+    &:active {
+      text-decoration: underline;
+    }
+  }
 }
 
 .mobile-padding {

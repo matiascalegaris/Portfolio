@@ -3,11 +3,13 @@ import { GetSkillList } from '../../Api';
 import { FilterBar } from './FilterBar/filter-bar';
 import './portfolio.scss'
 import { PreviewCard } from './preview-card';
-import { Skill } from '../../Models/skill';
 import { Profile } from '../../Models/profile';
+import { useParams } from 'react-router-dom';
 
 export const Portfolio = ({resume} : {resume: Profile})=> {
-  const [activeFilters, setActiveFilters] = useState<string[]>([])
+  const params = useParams<{filters: string}>();
+  const urlFilters = params.filters?.split(",")
+  const [activeFilters, setActiveFilters] = useState<string[]>(urlFilters || [])
   let filteredList = resume.projectHistory.filter(e => (!e.hideInGrid))
   if (activeFilters.length > 0) {
     filteredList = resume.projectHistory.filter( e => 
