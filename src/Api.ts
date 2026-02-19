@@ -105,7 +105,7 @@ export const GetResume = () => {
         implementing mobile applications in multiple frameworks 
         including native technologies and frameworks such as Xamarin, 
         Unity3D and ReactNative.`,
-        `I used Unity3D to create VR/AR experiences and other interactive 
+        `I worked with Unity3D to create VR/AR experiences and other interactive 
         applications for events using body tracking devices.`,
         `I worked with Swift, Ionic and Xamarin to implement different solutions 
         on mobile platforms`],
@@ -148,7 +148,7 @@ export const GetResume = () => {
         startDate : new Date('15 Jul 2024 00:00:00 GMT'),
         endDate: null,
         summary: [`Maintained and enhanced the company’s C#-based retail POS system, ensuring stability and compatibility across stores`,
-        `Designed and implemented payment integration protocols to communicate with various card readers and payment networks, enabling secure and reliable credit and debit transactions`,
+        `Implemented payment integration protocols to communicate with various card readers and payment networks, enabling secure and reliable credit and debit transactions`,
         `Created a network simulator to perform local testing of payment flows and developed internal tools to improve daily productivity for the development team`
         ],
         projectList: []
@@ -678,15 +678,52 @@ export const GetResume = () => {
       {
         id: 25,
         projectType: "Generic",
-        name: "Extend data engineering and analytics platform",
+        name: "Extend and maintain a C#-based retail POS system",
         summary: [
-          `Maintained and enhanced the company’s C#-based retail POS system, ensuring stability and compatibility across stores`,
-          `Designed and implemented payment integration protocols to communicate with various card readers and payment networks, enabling secure and reliable credit and debit transactions`,
-          `Created a network simulator to perform local testing of payment flows and developed internal tools to improve daily productivity for the development team`
+          `Maintained and enhanced the company’s C#-based retail POS system, ensuring stability and compatibility across stores`
         ],
         start: new Date('15 Jul 2024 06:00:01 GMT'),
+        end: new Date('15 Jan 2025 06:00:01 GMT'),
+        usedTechologies: ["C#", "Windows", "Linux", "git"],
+        relatedSites: [],
+        coverPicture: "",
+        backgroundStyle: "Light",
+        previewColumns:  1,
+        previewRows: 1,
+        hideInGrid: true,
+        jobPositionId: 9,
+        images: []
+      },
+      {
+        id: 26,
+        projectType: "Generic",
+        name: "Create network payment simulator",
+        summary: [
+          `Developed a network payment simulator to perform local testing of payment flows and ensure the reliability of payment integration protocols`,
+          `Implemented simulation scenarios for various card readers and payment networks, enabling comprehensive testing of credit and debit transactions`
+        ],
+        start: new Date('01 Jan 2025 06:00:01 GMT'),
         end: null,
-        usedTechologies: ["C++", "C++11", "C++14", "C#", "Windows", "Linux", "git"],
+        usedTechologies: ["C#", "Windows", "Linux", "git"],
+        relatedSites: [],
+        coverPicture: "",
+        backgroundStyle: "Light",
+        previewColumns:  1,
+        previewRows: 1,
+        hideInGrid: true,
+        jobPositionId: 9,
+        images: []
+      },
+      {
+        id: 27,
+        projectType: "Generic",
+        name: "Create a plugin to interact with payment network APIs",
+        summary: [
+          `Developed a plugin to interact with payment network APIs, enabling seamless integration with various payment network`
+        ],
+        start: new Date('01 Jan 2025 06:00:01 GMT'),
+        end: null,
+        usedTechologies: ["C++", "C++11", "C++14", "Windows", "Linux", "git"],
         relatedSites: [],
         coverPicture: "",
         backgroundStyle: "Light",
